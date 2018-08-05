@@ -37,10 +37,17 @@ if __name__ == "__main__":
     print(soup.find_all("tr")[16:])
     d = {}
     for i in soup.find_all("tr")[16:]:
-        print(i.em.string)
-        print(i.strong.string)
-        print("https://github.com%s" % i.a["href"].lstrip())
-        print(i.find_all("td")[-2].strong.string)
-        print(str(i.find_all("td")[-2]).split("</strong>")[1].split("<")[0])
+        api_class = i.em.string
+        print("api_class: ", api_class)
+        method = i.strong.string
+        print("method: ", method)
+        url = "https://github.com%s" % i.a["href"].lstrip()
+        print("url: ", url)
+        http_request = i.find_all("td")[-2].strong.string + str(i.find_all("td")[-2]).split("</strong>")[1].split("<")[0]
+        print("HTTP request: ",  http_request)
 
+        d[url] = (method, api_class, http_request)
 
+    with open("/home/kingsuo/workspace/git/WebCrawler/File/kubernetes.json", "w") as fd:
+        json.dump(d, fd)
+        fd.write('\n')
