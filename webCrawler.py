@@ -39,13 +39,5 @@ if __name__ == "__main__":
         print(i.em.string)
         print(i.strong.string)
         print(i.a)
-    # j = 0
-    # for i in map(clean, soup.find_all("tr")[16:]):
-    #     j += 1
-    #     if j >= 5:
-    #         break
-    #     print(i)
-    print(len(soup.find_all("tr")[16:]))
-    # print(len(soup.find_all("em")[1:]))
-    print(len([i for i in soup.find_all("strong")[6:] if
-               "GET" not in i and "POST" not in i and "DELETE" not in i and "PATCH" not in i and "PUT" not in i]))
+        print(i.find_all("td")[-2].strong.string)
+        print(i.find_all("td")[-2])
