@@ -35,9 +35,12 @@ if __name__ == "__main__":
     soup = BeautifulSoup(open("/home/kingsuo/workspace/git/WebCrawler/File/kubernetes.txt"))
     # print(soup.prettify())
     print(soup.find_all("tr")[16:])
+    d = {}
     for i in soup.find_all("tr")[16:]:
         print(i.em.string)
         print(i.strong.string)
-        print(i.a)
+        print("https://github.com%s" % i.a["href"].lstrip())
         print(i.find_all("td")[-2].strong.string)
-        print(i.find_all("td")[-2])
+        print(str(i.find_all("td")[-2]).split("</strong>")[1].split("<")[0])
+
+
