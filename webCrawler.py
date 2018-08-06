@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import json
+from multiprocessing import pool as ProcessPoll
+from multiprocessing.dummy import Pool as ThreadPool
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -16,15 +19,36 @@ class WebCrawler(object):
     def get_urls(self, url):
         result = requests.get(url)
         soup = BeautifulSoup(result.content, "html.parser")
-        print(soup)
         _, filename = os.path.split(url.split("://")[1])
-        # with open(os.path.join(self.save_path, "%s.txt" % filename), "w") as fd:
-        #     fd.writelines(soup)
+        print(soup.find_all("tr")[16:])
+        d = {}
+        for i in soup.find_all("tr")[16:]:
+            api_class = i.em.string
+            print("api_class: ", api_class)
+            method = i.strong.string
+            print("method: ", method)
+            url = "https://github.com%s" % i.a["href"].lstrip()
+            print("url: ", url)
+            http_request = i.find_all("td")[-2].strong.string + \
+                           str(i.find_all("td")[-2]).split("</strong>")[1].split("<")[
+                               0]
+            print("HTTP request: ", http_request)
 
+            d[url] = (method, api_class, http_request)
 
-def clean(string):
-    result = string.split("td")
-    return result
+        with open(os.path.join(self.save_path, filename + ".json"), "w") as fd:
+            json.dump(d, fd)
+            fd.write('\n')
+
+    def get_param(self):
+        pass
+
+    def save_html(self, api_vision, method, html_data):
+        save_path = os.path.join("F:\workspace\git\WebCrawler\File", api_vision)
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
+        with open("%s/%s.html" % (save_path, method), "w", encoding="utf-8") as fd:
+            fd.writelines(str(html_data))
 
 
 if __name__ == "__main__":
@@ -32,22 +56,18 @@ if __name__ == "__main__":
     # url = "https://github.com/kubernetes-client/python/tree/master/kubernetes"
     # web_crawler.get_urls(url)
 
-    soup = BeautifulSoup(open("/home/kingsuo/workspace/git/WebCrawler/File/kubernetes.txt"))
-    # print(soup.prettify())
-    print(soup.find_all("tr")[16:])
-    d = {}
-    for i in soup.find_all("tr")[16:]:
-        api_class = i.em.string
-        print("api_class: ", api_class)
-        method = i.strong.string
-        print("method: ", method)
-        url = "https://github.com%s" % i.a["href"].lstrip()
-        print("url: ", url)
-        http_request = i.find_all("td")[-2].strong.string + str(i.find_all("td")[-2]).split("</strong>")[1].split("<")[0]
-        print("HTTP request: ",  http_request)
+    # url = "https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/AppsV1Api.md#create_namespaced_deployment"
+    # result = requests.get(url)
+    # api_vision = url.split(".md")[0].split("/")[-1]
+    # method = url.split("#")[1]
+    # print(api_vision)
+    # print(method)
+    # print(soup)
+    # web_crawler.save_html(api_vision, method, soup)
 
-        d[url] = (method, api_class, http_request)
-
-    with open("/home/kingsuo/workspace/git/WebCrawler/File/kubernetes.json", "w") as fd:
-        json.dump(d, fd)
-        fd.write('\n')
+    path = "F:\workspace\git\WebCrawler\File\AppsV1Api\create_namespaced_deployment.html"
+    soup = BeautifulSoup(open(path, encoding="utf-8"), "html.parser")
+    tables = soup.find_all("table")
+    print(len(tables))
+    for i in tables:
+        print(i)

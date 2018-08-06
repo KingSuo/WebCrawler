@@ -1,0 +1,1598 @@
+{
+    "AdmissionregistrationApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "AdmissionregistrationV1alpha1Api": {
+        "initializer_configuration": {
+            "create": "create_initializer_configuration",
+            "delete": "delete_initializer_configuration",
+            "list": "list_initializer_configuration",
+            "patch": "patch_initializer_configuration",
+            "read": "read_initializer_configuration",
+            "replace": "replace_initializer_configuration"
+        },
+        "collection_initializer_configuration": {
+            "delete": "delete_collection_initializer_configuration"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "AdmissionregistrationV1beta1Api": {
+        "mutating_webhook_configuration": {
+            "create": "create_mutating_webhook_configuration",
+            "delete": "delete_mutating_webhook_configuration",
+            "list": "list_mutating_webhook_configuration",
+            "patch": "patch_mutating_webhook_configuration",
+            "read": "read_mutating_webhook_configuration",
+            "replace": "replace_mutating_webhook_configuration"
+        },
+        "validating_webhook_configuration": {
+            "create": "create_validating_webhook_configuration",
+            "delete": "delete_validating_webhook_configuration",
+            "list": "list_validating_webhook_configuration",
+            "patch": "patch_validating_webhook_configuration",
+            "read": "read_validating_webhook_configuration",
+            "replace": "replace_validating_webhook_configuration"
+        },
+        "collection_mutating_webhook_configuration": {
+            "delete": "delete_collection_mutating_webhook_configuration"
+        },
+        "collection_validating_webhook_configuration": {
+            "delete": "delete_collection_validating_webhook_configuration"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "ApiextensionsApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "ApiextensionsV1beta1Api": {
+        "custom_resource_definition": {
+            "create": "create_custom_resource_definition",
+            "delete": "delete_custom_resource_definition",
+            "list": "list_custom_resource_definition",
+            "patch": "patch_custom_resource_definition",
+            "read": "read_custom_resource_definition",
+            "replace": "replace_custom_resource_definition"
+        },
+        "collection_custom_resource_definition": {
+            "delete": "delete_collection_custom_resource_definition"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "custom_resource_definition_status": {
+            "patch": "patch_custom_resource_definition_status",
+            "read": "read_custom_resource_definition_status",
+            "replace": "replace_custom_resource_definition_status"
+        }
+    },
+    "ApiregistrationApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "ApiregistrationV1Api": {
+        "api_service": {
+            "create": "create_api_service",
+            "delete": "delete_api_service",
+            "list": "list_api_service",
+            "patch": "patch_api_service",
+            "read": "read_api_service",
+            "replace": "replace_api_service"
+        },
+        "collection_api_service": {
+            "delete": "delete_collection_api_service"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "api_service_status": {
+            "patch": "patch_api_service_status",
+            "read": "read_api_service_status",
+            "replace": "replace_api_service_status"
+        }
+    },
+    "ApiregistrationV1beta1Api": {
+        "api_service": {
+            "create": "create_api_service",
+            "delete": "delete_api_service",
+            "list": "list_api_service",
+            "patch": "patch_api_service",
+            "read": "read_api_service",
+            "replace": "replace_api_service"
+        },
+        "collection_api_service": {
+            "delete": "delete_collection_api_service"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "api_service_status": {
+            "patch": "patch_api_service_status",
+            "read": "read_api_service_status",
+            "replace": "replace_api_service_status"
+        }
+    },
+    "ApisApi": {
+        "api_versions": {
+            "get": "get_api_versions"
+        }
+    },
+    "AppsApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "AppsV1Api": {
+        "namespaced_controller_revision": {
+            "create": "create_namespaced_controller_revision",
+            "delete": "delete_namespaced_controller_revision",
+            "list": "list_namespaced_controller_revision",
+            "patch": "patch_namespaced_controller_revision",
+            "read": "read_namespaced_controller_revision",
+            "replace": "replace_namespaced_controller_revision"
+        },
+        "namespaced_daemon_set": {
+            "create": "create_namespaced_daemon_set",
+            "delete": "delete_namespaced_daemon_set",
+            "list": "list_namespaced_daemon_set",
+            "patch": "patch_namespaced_daemon_set",
+            "read": "read_namespaced_daemon_set",
+            "replace": "replace_namespaced_daemon_set"
+        },
+        "namespaced_deployment": {
+            "create": "create_namespaced_deployment",
+            "delete": "delete_namespaced_deployment",
+            "list": "list_namespaced_deployment",
+            "patch": "patch_namespaced_deployment",
+            "read": "read_namespaced_deployment",
+            "replace": "replace_namespaced_deployment"
+        },
+        "namespaced_replica_set": {
+            "create": "create_namespaced_replica_set",
+            "delete": "delete_namespaced_replica_set",
+            "list": "list_namespaced_replica_set",
+            "patch": "patch_namespaced_replica_set",
+            "read": "read_namespaced_replica_set",
+            "replace": "replace_namespaced_replica_set"
+        },
+        "namespaced_stateful_set": {
+            "create": "create_namespaced_stateful_set",
+            "delete": "delete_namespaced_stateful_set",
+            "list": "list_namespaced_stateful_set",
+            "patch": "patch_namespaced_stateful_set",
+            "read": "read_namespaced_stateful_set",
+            "replace": "replace_namespaced_stateful_set"
+        },
+        "collection_namespaced_controller_revision": {
+            "delete": "delete_collection_namespaced_controller_revision"
+        },
+        "collection_namespaced_daemon_set": {
+            "delete": "delete_collection_namespaced_daemon_set"
+        },
+        "collection_namespaced_deployment": {
+            "delete": "delete_collection_namespaced_deployment"
+        },
+        "collection_namespaced_replica_set": {
+            "delete": "delete_collection_namespaced_replica_set"
+        },
+        "collection_namespaced_stateful_set": {
+            "delete": "delete_collection_namespaced_stateful_set"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "controller_revision_for_all_namespaces": {
+            "list": "list_controller_revision_for_all_namespaces"
+        },
+        "daemon_set_for_all_namespaces": {
+            "list": "list_daemon_set_for_all_namespaces"
+        },
+        "deployment_for_all_namespaces": {
+            "list": "list_deployment_for_all_namespaces"
+        },
+        "replica_set_for_all_namespaces": {
+            "list": "list_replica_set_for_all_namespaces"
+        },
+        "stateful_set_for_all_namespaces": {
+            "list": "list_stateful_set_for_all_namespaces"
+        },
+        "namespaced_daemon_set_status": {
+            "patch": "patch_namespaced_daemon_set_status",
+            "read": "read_namespaced_daemon_set_status",
+            "replace": "replace_namespaced_daemon_set_status"
+        },
+        "namespaced_deployment_scale": {
+            "patch": "patch_namespaced_deployment_scale",
+            "read": "read_namespaced_deployment_scale",
+            "replace": "replace_namespaced_deployment_scale"
+        },
+        "namespaced_deployment_status": {
+            "patch": "patch_namespaced_deployment_status",
+            "read": "read_namespaced_deployment_status",
+            "replace": "replace_namespaced_deployment_status"
+        },
+        "namespaced_replica_set_scale": {
+            "patch": "patch_namespaced_replica_set_scale",
+            "read": "read_namespaced_replica_set_scale",
+            "replace": "replace_namespaced_replica_set_scale"
+        },
+        "namespaced_replica_set_status": {
+            "patch": "patch_namespaced_replica_set_status",
+            "read": "read_namespaced_replica_set_status",
+            "replace": "replace_namespaced_replica_set_status"
+        },
+        "namespaced_stateful_set_scale": {
+            "patch": "patch_namespaced_stateful_set_scale",
+            "read": "read_namespaced_stateful_set_scale",
+            "replace": "replace_namespaced_stateful_set_scale"
+        },
+        "namespaced_stateful_set_status": {
+            "patch": "patch_namespaced_stateful_set_status",
+            "read": "read_namespaced_stateful_set_status",
+            "replace": "replace_namespaced_stateful_set_status"
+        }
+    },
+    "AppsV1beta1Api": {
+        "namespaced_controller_revision": {
+            "create": "create_namespaced_controller_revision",
+            "delete": "delete_namespaced_controller_revision",
+            "list": "list_namespaced_controller_revision",
+            "patch": "patch_namespaced_controller_revision",
+            "read": "read_namespaced_controller_revision",
+            "replace": "replace_namespaced_controller_revision"
+        },
+        "namespaced_deployment": {
+            "create": "create_namespaced_deployment",
+            "delete": "delete_namespaced_deployment",
+            "list": "list_namespaced_deployment",
+            "patch": "patch_namespaced_deployment",
+            "read": "read_namespaced_deployment",
+            "replace": "replace_namespaced_deployment"
+        },
+        "namespaced_deployment_rollback": {
+            "create": "create_namespaced_deployment_rollback"
+        },
+        "namespaced_stateful_set": {
+            "create": "create_namespaced_stateful_set",
+            "delete": "delete_namespaced_stateful_set",
+            "list": "list_namespaced_stateful_set",
+            "patch": "patch_namespaced_stateful_set",
+            "read": "read_namespaced_stateful_set",
+            "replace": "replace_namespaced_stateful_set"
+        },
+        "collection_namespaced_controller_revision": {
+            "delete": "delete_collection_namespaced_controller_revision"
+        },
+        "collection_namespaced_deployment": {
+            "delete": "delete_collection_namespaced_deployment"
+        },
+        "collection_namespaced_stateful_set": {
+            "delete": "delete_collection_namespaced_stateful_set"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "controller_revision_for_all_namespaces": {
+            "list": "list_controller_revision_for_all_namespaces"
+        },
+        "deployment_for_all_namespaces": {
+            "list": "list_deployment_for_all_namespaces"
+        },
+        "stateful_set_for_all_namespaces": {
+            "list": "list_stateful_set_for_all_namespaces"
+        },
+        "namespaced_deployment_scale": {
+            "patch": "patch_namespaced_deployment_scale",
+            "read": "read_namespaced_deployment_scale",
+            "replace": "replace_namespaced_deployment_scale"
+        },
+        "namespaced_deployment_status": {
+            "patch": "patch_namespaced_deployment_status",
+            "read": "read_namespaced_deployment_status",
+            "replace": "replace_namespaced_deployment_status"
+        },
+        "namespaced_stateful_set_scale": {
+            "patch": "patch_namespaced_stateful_set_scale",
+            "read": "read_namespaced_stateful_set_scale",
+            "replace": "replace_namespaced_stateful_set_scale"
+        },
+        "namespaced_stateful_set_status": {
+            "patch": "patch_namespaced_stateful_set_status",
+            "read": "read_namespaced_stateful_set_status",
+            "replace": "replace_namespaced_stateful_set_status"
+        }
+    },
+    "AppsV1beta2Api": {
+        "namespaced_controller_revision": {
+            "create": "create_namespaced_controller_revision",
+            "delete": "delete_namespaced_controller_revision",
+            "list": "list_namespaced_controller_revision",
+            "patch": "patch_namespaced_controller_revision",
+            "read": "read_namespaced_controller_revision",
+            "replace": "replace_namespaced_controller_revision"
+        },
+        "namespaced_daemon_set": {
+            "create": "create_namespaced_daemon_set",
+            "delete": "delete_namespaced_daemon_set",
+            "list": "list_namespaced_daemon_set",
+            "patch": "patch_namespaced_daemon_set",
+            "read": "read_namespaced_daemon_set",
+            "replace": "replace_namespaced_daemon_set"
+        },
+        "namespaced_deployment": {
+            "create": "create_namespaced_deployment",
+            "delete": "delete_namespaced_deployment",
+            "list": "list_namespaced_deployment",
+            "patch": "patch_namespaced_deployment",
+            "read": "read_namespaced_deployment",
+            "replace": "replace_namespaced_deployment"
+        },
+        "namespaced_replica_set": {
+            "create": "create_namespaced_replica_set",
+            "delete": "delete_namespaced_replica_set",
+            "list": "list_namespaced_replica_set",
+            "patch": "patch_namespaced_replica_set",
+            "read": "read_namespaced_replica_set",
+            "replace": "replace_namespaced_replica_set"
+        },
+        "namespaced_stateful_set": {
+            "create": "create_namespaced_stateful_set",
+            "delete": "delete_namespaced_stateful_set",
+            "list": "list_namespaced_stateful_set",
+            "patch": "patch_namespaced_stateful_set",
+            "read": "read_namespaced_stateful_set",
+            "replace": "replace_namespaced_stateful_set"
+        },
+        "collection_namespaced_controller_revision": {
+            "delete": "delete_collection_namespaced_controller_revision"
+        },
+        "collection_namespaced_daemon_set": {
+            "delete": "delete_collection_namespaced_daemon_set"
+        },
+        "collection_namespaced_deployment": {
+            "delete": "delete_collection_namespaced_deployment"
+        },
+        "collection_namespaced_replica_set": {
+            "delete": "delete_collection_namespaced_replica_set"
+        },
+        "collection_namespaced_stateful_set": {
+            "delete": "delete_collection_namespaced_stateful_set"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "controller_revision_for_all_namespaces": {
+            "list": "list_controller_revision_for_all_namespaces"
+        },
+        "daemon_set_for_all_namespaces": {
+            "list": "list_daemon_set_for_all_namespaces"
+        },
+        "deployment_for_all_namespaces": {
+            "list": "list_deployment_for_all_namespaces"
+        },
+        "replica_set_for_all_namespaces": {
+            "list": "list_replica_set_for_all_namespaces"
+        },
+        "stateful_set_for_all_namespaces": {
+            "list": "list_stateful_set_for_all_namespaces"
+        },
+        "namespaced_daemon_set_status": {
+            "patch": "patch_namespaced_daemon_set_status",
+            "read": "read_namespaced_daemon_set_status",
+            "replace": "replace_namespaced_daemon_set_status"
+        },
+        "namespaced_deployment_scale": {
+            "patch": "patch_namespaced_deployment_scale",
+            "read": "read_namespaced_deployment_scale",
+            "replace": "replace_namespaced_deployment_scale"
+        },
+        "namespaced_deployment_status": {
+            "patch": "patch_namespaced_deployment_status",
+            "read": "read_namespaced_deployment_status",
+            "replace": "replace_namespaced_deployment_status"
+        },
+        "namespaced_replica_set_scale": {
+            "patch": "patch_namespaced_replica_set_scale",
+            "read": "read_namespaced_replica_set_scale",
+            "replace": "replace_namespaced_replica_set_scale"
+        },
+        "namespaced_replica_set_status": {
+            "patch": "patch_namespaced_replica_set_status",
+            "read": "read_namespaced_replica_set_status",
+            "replace": "replace_namespaced_replica_set_status"
+        },
+        "namespaced_stateful_set_scale": {
+            "patch": "patch_namespaced_stateful_set_scale",
+            "read": "read_namespaced_stateful_set_scale",
+            "replace": "replace_namespaced_stateful_set_scale"
+        },
+        "namespaced_stateful_set_status": {
+            "patch": "patch_namespaced_stateful_set_status",
+            "read": "read_namespaced_stateful_set_status",
+            "replace": "replace_namespaced_stateful_set_status"
+        }
+    },
+    "AuthenticationApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "AuthenticationV1Api": {
+        "token_review": {
+            "create": "create_token_review"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "AuthenticationV1beta1Api": {
+        "token_review": {
+            "create": "create_token_review"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "AuthorizationApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "AuthorizationV1Api": {
+        "namespaced_local_subject_access_review": {
+            "create": "create_namespaced_local_subject_access_review"
+        },
+        "self_subject_access_review": {
+            "create": "create_self_subject_access_review"
+        },
+        "self_subject_rules_review": {
+            "create": "create_self_subject_rules_review"
+        },
+        "subject_access_review": {
+            "create": "create_subject_access_review"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "AuthorizationV1beta1Api": {
+        "namespaced_local_subject_access_review": {
+            "create": "create_namespaced_local_subject_access_review"
+        },
+        "self_subject_access_review": {
+            "create": "create_self_subject_access_review"
+        },
+        "self_subject_rules_review": {
+            "create": "create_self_subject_rules_review"
+        },
+        "subject_access_review": {
+            "create": "create_subject_access_review"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "AutoscalingApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "AutoscalingV1Api": {
+        "namespaced_horizontal_pod_autoscaler": {
+            "create": "create_namespaced_horizontal_pod_autoscaler",
+            "delete": "delete_namespaced_horizontal_pod_autoscaler",
+            "list": "list_namespaced_horizontal_pod_autoscaler",
+            "patch": "patch_namespaced_horizontal_pod_autoscaler",
+            "read": "read_namespaced_horizontal_pod_autoscaler",
+            "replace": "replace_namespaced_horizontal_pod_autoscaler"
+        },
+        "collection_namespaced_horizontal_pod_autoscaler": {
+            "delete": "delete_collection_namespaced_horizontal_pod_autoscaler"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "horizontal_pod_autoscaler_for_all_namespaces": {
+            "list": "list_horizontal_pod_autoscaler_for_all_namespaces"
+        },
+        "namespaced_horizontal_pod_autoscaler_status": {
+            "patch": "patch_namespaced_horizontal_pod_autoscaler_status",
+            "read": "read_namespaced_horizontal_pod_autoscaler_status",
+            "replace": "replace_namespaced_horizontal_pod_autoscaler_status"
+        }
+    },
+    "AutoscalingV2beta1Api": {
+        "namespaced_horizontal_pod_autoscaler": {
+            "create": "create_namespaced_horizontal_pod_autoscaler",
+            "delete": "delete_namespaced_horizontal_pod_autoscaler",
+            "list": "list_namespaced_horizontal_pod_autoscaler",
+            "patch": "patch_namespaced_horizontal_pod_autoscaler",
+            "read": "read_namespaced_horizontal_pod_autoscaler",
+            "replace": "replace_namespaced_horizontal_pod_autoscaler"
+        },
+        "collection_namespaced_horizontal_pod_autoscaler": {
+            "delete": "delete_collection_namespaced_horizontal_pod_autoscaler"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "horizontal_pod_autoscaler_for_all_namespaces": {
+            "list": "list_horizontal_pod_autoscaler_for_all_namespaces"
+        },
+        "namespaced_horizontal_pod_autoscaler_status": {
+            "patch": "patch_namespaced_horizontal_pod_autoscaler_status",
+            "read": "read_namespaced_horizontal_pod_autoscaler_status",
+            "replace": "replace_namespaced_horizontal_pod_autoscaler_status"
+        }
+    },
+    "BatchApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "BatchV1Api": {
+        "namespaced_job": {
+            "create": "create_namespaced_job",
+            "delete": "delete_namespaced_job",
+            "list": "list_namespaced_job",
+            "patch": "patch_namespaced_job",
+            "read": "read_namespaced_job",
+            "replace": "replace_namespaced_job"
+        },
+        "collection_namespaced_job": {
+            "delete": "delete_collection_namespaced_job"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "job_for_all_namespaces": {
+            "list": "list_job_for_all_namespaces"
+        },
+        "namespaced_job_status": {
+            "patch": "patch_namespaced_job_status",
+            "read": "read_namespaced_job_status",
+            "replace": "replace_namespaced_job_status"
+        }
+    },
+    "BatchV1beta1Api": {
+        "namespaced_cron_job": {
+            "create": "create_namespaced_cron_job",
+            "delete": "delete_namespaced_cron_job",
+            "list": "list_namespaced_cron_job",
+            "patch": "patch_namespaced_cron_job",
+            "read": "read_namespaced_cron_job",
+            "replace": "replace_namespaced_cron_job"
+        },
+        "collection_namespaced_cron_job": {
+            "delete": "delete_collection_namespaced_cron_job"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "cron_job_for_all_namespaces": {
+            "list": "list_cron_job_for_all_namespaces"
+        },
+        "namespaced_cron_job_status": {
+            "patch": "patch_namespaced_cron_job_status",
+            "read": "read_namespaced_cron_job_status",
+            "replace": "replace_namespaced_cron_job_status"
+        }
+    },
+    "BatchV2alpha1Api": {
+        "namespaced_cron_job": {
+            "create": "create_namespaced_cron_job",
+            "delete": "delete_namespaced_cron_job",
+            "list": "list_namespaced_cron_job",
+            "patch": "patch_namespaced_cron_job",
+            "read": "read_namespaced_cron_job",
+            "replace": "replace_namespaced_cron_job"
+        },
+        "collection_namespaced_cron_job": {
+            "delete": "delete_collection_namespaced_cron_job"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "cron_job_for_all_namespaces": {
+            "list": "list_cron_job_for_all_namespaces"
+        },
+        "namespaced_cron_job_status": {
+            "patch": "patch_namespaced_cron_job_status",
+            "read": "read_namespaced_cron_job_status",
+            "replace": "replace_namespaced_cron_job_status"
+        }
+    },
+    "CertificatesApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "CertificatesV1beta1Api": {
+        "certificate_signing_request": {
+            "create": "create_certificate_signing_request",
+            "delete": "delete_certificate_signing_request",
+            "list": "list_certificate_signing_request",
+            "patch": "patch_certificate_signing_request",
+            "read": "read_certificate_signing_request",
+            "replace": "replace_certificate_signing_request"
+        },
+        "collection_certificate_signing_request": {
+            "delete": "delete_collection_certificate_signing_request"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "certificate_signing_request_status": {
+            "patch": "patch_certificate_signing_request_status",
+            "read": "read_certificate_signing_request_status",
+            "replace": "replace_certificate_signing_request_status"
+        },
+        "certificate_signing_request_approval": {
+            "replace": "replace_certificate_signing_request_approval"
+        }
+    },
+    "CoreApi": {
+        "api_versions": {
+            "get": "get_api_versions"
+        }
+    },
+    "CoreV1Api": {
+        "delete_namespaced_pod_proxy": {
+            "connect": "connect_delete_namespaced_pod_proxy"
+        },
+        "delete_namespaced_pod_proxy_with_path": {
+            "connect": "connect_delete_namespaced_pod_proxy_with_path"
+        },
+        "delete_namespaced_service_proxy": {
+            "connect": "connect_delete_namespaced_service_proxy"
+        },
+        "delete_namespaced_service_proxy_with_path": {
+            "connect": "connect_delete_namespaced_service_proxy_with_path"
+        },
+        "delete_node_proxy": {
+            "connect": "connect_delete_node_proxy"
+        },
+        "delete_node_proxy_with_path": {
+            "connect": "connect_delete_node_proxy_with_path"
+        },
+        "get_namespaced_pod_attach": {
+            "connect": "connect_get_namespaced_pod_attach"
+        },
+        "get_namespaced_pod_exec": {
+            "connect": "connect_get_namespaced_pod_exec"
+        },
+        "get_namespaced_pod_portforward": {
+            "connect": "connect_get_namespaced_pod_portforward"
+        },
+        "get_namespaced_pod_proxy": {
+            "connect": "connect_get_namespaced_pod_proxy"
+        },
+        "get_namespaced_pod_proxy_with_path": {
+            "connect": "connect_get_namespaced_pod_proxy_with_path"
+        },
+        "get_namespaced_service_proxy": {
+            "connect": "connect_get_namespaced_service_proxy"
+        },
+        "get_namespaced_service_proxy_with_path": {
+            "connect": "connect_get_namespaced_service_proxy_with_path"
+        },
+        "get_node_proxy": {
+            "connect": "connect_get_node_proxy"
+        },
+        "get_node_proxy_with_path": {
+            "connect": "connect_get_node_proxy_with_path"
+        },
+        "head_namespaced_pod_proxy": {
+            "connect": "connect_head_namespaced_pod_proxy"
+        },
+        "head_namespaced_pod_proxy_with_path": {
+            "connect": "connect_head_namespaced_pod_proxy_with_path"
+        },
+        "head_namespaced_service_proxy": {
+            "connect": "connect_head_namespaced_service_proxy"
+        },
+        "head_namespaced_service_proxy_with_path": {
+            "connect": "connect_head_namespaced_service_proxy_with_path"
+        },
+        "head_node_proxy": {
+            "connect": "connect_head_node_proxy"
+        },
+        "head_node_proxy_with_path": {
+            "connect": "connect_head_node_proxy_with_path"
+        },
+        "options_namespaced_pod_proxy": {
+            "connect": "connect_options_namespaced_pod_proxy"
+        },
+        "options_namespaced_pod_proxy_with_path": {
+            "connect": "connect_options_namespaced_pod_proxy_with_path"
+        },
+        "options_namespaced_service_proxy": {
+            "connect": "connect_options_namespaced_service_proxy"
+        },
+        "options_namespaced_service_proxy_with_path": {
+            "connect": "connect_options_namespaced_service_proxy_with_path"
+        },
+        "options_node_proxy": {
+            "connect": "connect_options_node_proxy"
+        },
+        "options_node_proxy_with_path": {
+            "connect": "connect_options_node_proxy_with_path"
+        },
+        "patch_namespaced_pod_proxy": {
+            "connect": "connect_patch_namespaced_pod_proxy"
+        },
+        "patch_namespaced_pod_proxy_with_path": {
+            "connect": "connect_patch_namespaced_pod_proxy_with_path"
+        },
+        "patch_namespaced_service_proxy": {
+            "connect": "connect_patch_namespaced_service_proxy"
+        },
+        "patch_namespaced_service_proxy_with_path": {
+            "connect": "connect_patch_namespaced_service_proxy_with_path"
+        },
+        "patch_node_proxy": {
+            "connect": "connect_patch_node_proxy"
+        },
+        "patch_node_proxy_with_path": {
+            "connect": "connect_patch_node_proxy_with_path"
+        },
+        "post_namespaced_pod_attach": {
+            "connect": "connect_post_namespaced_pod_attach"
+        },
+        "post_namespaced_pod_exec": {
+            "connect": "connect_post_namespaced_pod_exec"
+        },
+        "post_namespaced_pod_portforward": {
+            "connect": "connect_post_namespaced_pod_portforward"
+        },
+        "post_namespaced_pod_proxy": {
+            "connect": "connect_post_namespaced_pod_proxy"
+        },
+        "post_namespaced_pod_proxy_with_path": {
+            "connect": "connect_post_namespaced_pod_proxy_with_path"
+        },
+        "post_namespaced_service_proxy": {
+            "connect": "connect_post_namespaced_service_proxy"
+        },
+        "post_namespaced_service_proxy_with_path": {
+            "connect": "connect_post_namespaced_service_proxy_with_path"
+        },
+        "post_node_proxy": {
+            "connect": "connect_post_node_proxy"
+        },
+        "post_node_proxy_with_path": {
+            "connect": "connect_post_node_proxy_with_path"
+        },
+        "put_namespaced_pod_proxy": {
+            "connect": "connect_put_namespaced_pod_proxy"
+        },
+        "put_namespaced_pod_proxy_with_path": {
+            "connect": "connect_put_namespaced_pod_proxy_with_path"
+        },
+        "put_namespaced_service_proxy": {
+            "connect": "connect_put_namespaced_service_proxy"
+        },
+        "put_namespaced_service_proxy_with_path": {
+            "connect": "connect_put_namespaced_service_proxy_with_path"
+        },
+        "put_node_proxy": {
+            "connect": "connect_put_node_proxy"
+        },
+        "put_node_proxy_with_path": {
+            "connect": "connect_put_node_proxy_with_path"
+        },
+        "namespace": {
+            "create": "create_namespace",
+            "delete": "delete_namespace",
+            "list": "list_namespace",
+            "patch": "patch_namespace",
+            "read": "read_namespace",
+            "replace": "replace_namespace"
+        },
+        "namespaced_binding": {
+            "create": "create_namespaced_binding"
+        },
+        "namespaced_config_map": {
+            "create": "create_namespaced_config_map",
+            "delete": "delete_namespaced_config_map",
+            "list": "list_namespaced_config_map",
+            "patch": "patch_namespaced_config_map",
+            "read": "read_namespaced_config_map",
+            "replace": "replace_namespaced_config_map"
+        },
+        "namespaced_endpoints": {
+            "create": "create_namespaced_endpoints",
+            "delete": "delete_namespaced_endpoints",
+            "list": "list_namespaced_endpoints",
+            "patch": "patch_namespaced_endpoints",
+            "read": "read_namespaced_endpoints",
+            "replace": "replace_namespaced_endpoints"
+        },
+        "namespaced_event": {
+            "create": "create_namespaced_event",
+            "delete": "delete_namespaced_event",
+            "list": "list_namespaced_event",
+            "patch": "patch_namespaced_event",
+            "read": "read_namespaced_event",
+            "replace": "replace_namespaced_event"
+        },
+        "namespaced_limit_range": {
+            "create": "create_namespaced_limit_range",
+            "delete": "delete_namespaced_limit_range",
+            "list": "list_namespaced_limit_range",
+            "patch": "patch_namespaced_limit_range",
+            "read": "read_namespaced_limit_range",
+            "replace": "replace_namespaced_limit_range"
+        },
+        "namespaced_persistent_volume_claim": {
+            "create": "create_namespaced_persistent_volume_claim",
+            "delete": "delete_namespaced_persistent_volume_claim",
+            "list": "list_namespaced_persistent_volume_claim",
+            "patch": "patch_namespaced_persistent_volume_claim",
+            "read": "read_namespaced_persistent_volume_claim",
+            "replace": "replace_namespaced_persistent_volume_claim"
+        },
+        "namespaced_pod": {
+            "create": "create_namespaced_pod",
+            "delete": "delete_namespaced_pod",
+            "list": "list_namespaced_pod",
+            "patch": "patch_namespaced_pod",
+            "read": "read_namespaced_pod",
+            "replace": "replace_namespaced_pod"
+        },
+        "namespaced_pod_binding": {
+            "create": "create_namespaced_pod_binding"
+        },
+        "namespaced_pod_eviction": {
+            "create": "create_namespaced_pod_eviction"
+        },
+        "namespaced_pod_template": {
+            "create": "create_namespaced_pod_template",
+            "delete": "delete_namespaced_pod_template",
+            "list": "list_namespaced_pod_template",
+            "patch": "patch_namespaced_pod_template",
+            "read": "read_namespaced_pod_template",
+            "replace": "replace_namespaced_pod_template"
+        },
+        "namespaced_replication_controller": {
+            "create": "create_namespaced_replication_controller",
+            "delete": "delete_namespaced_replication_controller",
+            "list": "list_namespaced_replication_controller",
+            "patch": "patch_namespaced_replication_controller",
+            "read": "read_namespaced_replication_controller",
+            "replace": "replace_namespaced_replication_controller"
+        },
+        "namespaced_resource_quota": {
+            "create": "create_namespaced_resource_quota",
+            "delete": "delete_namespaced_resource_quota",
+            "list": "list_namespaced_resource_quota",
+            "patch": "patch_namespaced_resource_quota",
+            "read": "read_namespaced_resource_quota",
+            "replace": "replace_namespaced_resource_quota"
+        },
+        "namespaced_secret": {
+            "create": "create_namespaced_secret",
+            "delete": "delete_namespaced_secret",
+            "list": "list_namespaced_secret",
+            "patch": "patch_namespaced_secret",
+            "read": "read_namespaced_secret",
+            "replace": "replace_namespaced_secret"
+        },
+        "namespaced_service": {
+            "create": "create_namespaced_service",
+            "delete": "delete_namespaced_service",
+            "list": "list_namespaced_service",
+            "patch": "patch_namespaced_service",
+            "read": "read_namespaced_service",
+            "replace": "replace_namespaced_service"
+        },
+        "namespaced_service_account": {
+            "create": "create_namespaced_service_account",
+            "delete": "delete_namespaced_service_account",
+            "list": "list_namespaced_service_account",
+            "patch": "patch_namespaced_service_account",
+            "read": "read_namespaced_service_account",
+            "replace": "replace_namespaced_service_account"
+        },
+        "node": {
+            "create": "create_node",
+            "delete": "delete_node",
+            "list": "list_node",
+            "patch": "patch_node",
+            "read": "read_node",
+            "replace": "replace_node"
+        },
+        "persistent_volume": {
+            "create": "create_persistent_volume",
+            "delete": "delete_persistent_volume",
+            "list": "list_persistent_volume",
+            "patch": "patch_persistent_volume",
+            "read": "read_persistent_volume",
+            "replace": "replace_persistent_volume"
+        },
+        "collection_namespaced_config_map": {
+            "delete": "delete_collection_namespaced_config_map"
+        },
+        "collection_namespaced_endpoints": {
+            "delete": "delete_collection_namespaced_endpoints"
+        },
+        "collection_namespaced_event": {
+            "delete": "delete_collection_namespaced_event"
+        },
+        "collection_namespaced_limit_range": {
+            "delete": "delete_collection_namespaced_limit_range"
+        },
+        "collection_namespaced_persistent_volume_claim": {
+            "delete": "delete_collection_namespaced_persistent_volume_claim"
+        },
+        "collection_namespaced_pod": {
+            "delete": "delete_collection_namespaced_pod"
+        },
+        "collection_namespaced_pod_template": {
+            "delete": "delete_collection_namespaced_pod_template"
+        },
+        "collection_namespaced_replication_controller": {
+            "delete": "delete_collection_namespaced_replication_controller"
+        },
+        "collection_namespaced_resource_quota": {
+            "delete": "delete_collection_namespaced_resource_quota"
+        },
+        "collection_namespaced_secret": {
+            "delete": "delete_collection_namespaced_secret"
+        },
+        "collection_namespaced_service_account": {
+            "delete": "delete_collection_namespaced_service_account"
+        },
+        "collection_node": {
+            "delete": "delete_collection_node"
+        },
+        "collection_persistent_volume": {
+            "delete": "delete_collection_persistent_volume"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "component_status": {
+            "list": "list_component_status",
+            "read": "read_component_status"
+        },
+        "config_map_for_all_namespaces": {
+            "list": "list_config_map_for_all_namespaces"
+        },
+        "endpoints_for_all_namespaces": {
+            "list": "list_endpoints_for_all_namespaces"
+        },
+        "event_for_all_namespaces": {
+            "list": "list_event_for_all_namespaces"
+        },
+        "limit_range_for_all_namespaces": {
+            "list": "list_limit_range_for_all_namespaces"
+        },
+        "persistent_volume_claim_for_all_namespaces": {
+            "list": "list_persistent_volume_claim_for_all_namespaces"
+        },
+        "pod_for_all_namespaces": {
+            "list": "list_pod_for_all_namespaces"
+        },
+        "pod_template_for_all_namespaces": {
+            "list": "list_pod_template_for_all_namespaces"
+        },
+        "replication_controller_for_all_namespaces": {
+            "list": "list_replication_controller_for_all_namespaces"
+        },
+        "resource_quota_for_all_namespaces": {
+            "list": "list_resource_quota_for_all_namespaces"
+        },
+        "secret_for_all_namespaces": {
+            "list": "list_secret_for_all_namespaces"
+        },
+        "service_account_for_all_namespaces": {
+            "list": "list_service_account_for_all_namespaces"
+        },
+        "service_for_all_namespaces": {
+            "list": "list_service_for_all_namespaces"
+        },
+        "namespace_status": {
+            "patch": "patch_namespace_status",
+            "read": "read_namespace_status",
+            "replace": "replace_namespace_status"
+        },
+        "namespaced_persistent_volume_claim_status": {
+            "patch": "patch_namespaced_persistent_volume_claim_status",
+            "read": "read_namespaced_persistent_volume_claim_status",
+            "replace": "replace_namespaced_persistent_volume_claim_status"
+        },
+        "namespaced_pod_status": {
+            "patch": "patch_namespaced_pod_status",
+            "read": "read_namespaced_pod_status",
+            "replace": "replace_namespaced_pod_status"
+        },
+        "namespaced_replication_controller_scale": {
+            "patch": "patch_namespaced_replication_controller_scale",
+            "read": "read_namespaced_replication_controller_scale",
+            "replace": "replace_namespaced_replication_controller_scale"
+        },
+        "namespaced_replication_controller_status": {
+            "patch": "patch_namespaced_replication_controller_status",
+            "read": "read_namespaced_replication_controller_status",
+            "replace": "replace_namespaced_replication_controller_status"
+        },
+        "namespaced_resource_quota_status": {
+            "patch": "patch_namespaced_resource_quota_status",
+            "read": "read_namespaced_resource_quota_status",
+            "replace": "replace_namespaced_resource_quota_status"
+        },
+        "namespaced_service_status": {
+            "patch": "patch_namespaced_service_status",
+            "read": "read_namespaced_service_status",
+            "replace": "replace_namespaced_service_status"
+        },
+        "node_status": {
+            "patch": "patch_node_status",
+            "read": "read_node_status",
+            "replace": "replace_node_status"
+        },
+        "persistent_volume_status": {
+            "patch": "patch_persistent_volume_status",
+            "read": "read_persistent_volume_status",
+            "replace": "replace_persistent_volume_status"
+        },
+        "namespaced_pod_log": {
+            "read": "read_namespaced_pod_log"
+        },
+        "namespace_finalize": {
+            "replace": "replace_namespace_finalize"
+        }
+    },
+    "CustomObjectsApi": {
+        "cluster_custom_object": {
+            "create": "create_cluster_custom_object",
+            "delete": "delete_cluster_custom_object",
+            "get": "get_cluster_custom_object",
+            "list": "list_cluster_custom_object",
+            "patch": "patch_cluster_custom_object",
+            "replace": "replace_cluster_custom_object"
+        },
+        "namespaced_custom_object": {
+            "create": "create_namespaced_custom_object",
+            "delete": "delete_namespaced_custom_object",
+            "get": "get_namespaced_custom_object",
+            "list": "list_namespaced_custom_object",
+            "patch": "patch_namespaced_custom_object",
+            "replace": "replace_namespaced_custom_object"
+        }
+    },
+    "EventsApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "EventsV1beta1Api": {
+        "namespaced_event": {
+            "create": "create_namespaced_event",
+            "delete": "delete_namespaced_event",
+            "list": "list_namespaced_event",
+            "patch": "patch_namespaced_event",
+            "read": "read_namespaced_event",
+            "replace": "replace_namespaced_event"
+        },
+        "collection_namespaced_event": {
+            "delete": "delete_collection_namespaced_event"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "event_for_all_namespaces": {
+            "list": "list_event_for_all_namespaces"
+        }
+    },
+    "ExtensionsApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "ExtensionsV1beta1Api": {
+        "namespaced_daemon_set": {
+            "create": "create_namespaced_daemon_set",
+            "delete": "delete_namespaced_daemon_set",
+            "list": "list_namespaced_daemon_set",
+            "patch": "patch_namespaced_daemon_set",
+            "read": "read_namespaced_daemon_set",
+            "replace": "replace_namespaced_daemon_set"
+        },
+        "namespaced_deployment": {
+            "create": "create_namespaced_deployment",
+            "delete": "delete_namespaced_deployment",
+            "list": "list_namespaced_deployment",
+            "patch": "patch_namespaced_deployment",
+            "read": "read_namespaced_deployment",
+            "replace": "replace_namespaced_deployment"
+        },
+        "namespaced_deployment_rollback": {
+            "create": "create_namespaced_deployment_rollback"
+        },
+        "namespaced_ingress": {
+            "create": "create_namespaced_ingress",
+            "delete": "delete_namespaced_ingress",
+            "list": "list_namespaced_ingress",
+            "patch": "patch_namespaced_ingress",
+            "read": "read_namespaced_ingress",
+            "replace": "replace_namespaced_ingress"
+        },
+        "namespaced_network_policy": {
+            "create": "create_namespaced_network_policy",
+            "delete": "delete_namespaced_network_policy",
+            "list": "list_namespaced_network_policy",
+            "patch": "patch_namespaced_network_policy",
+            "read": "read_namespaced_network_policy",
+            "replace": "replace_namespaced_network_policy"
+        },
+        "namespaced_replica_set": {
+            "create": "create_namespaced_replica_set",
+            "delete": "delete_namespaced_replica_set",
+            "list": "list_namespaced_replica_set",
+            "patch": "patch_namespaced_replica_set",
+            "read": "read_namespaced_replica_set",
+            "replace": "replace_namespaced_replica_set"
+        },
+        "pod_security_policy": {
+            "create": "create_pod_security_policy",
+            "delete": "delete_pod_security_policy",
+            "list": "list_pod_security_policy",
+            "patch": "patch_pod_security_policy",
+            "read": "read_pod_security_policy",
+            "replace": "replace_pod_security_policy"
+        },
+        "collection_namespaced_daemon_set": {
+            "delete": "delete_collection_namespaced_daemon_set"
+        },
+        "collection_namespaced_deployment": {
+            "delete": "delete_collection_namespaced_deployment"
+        },
+        "collection_namespaced_ingress": {
+            "delete": "delete_collection_namespaced_ingress"
+        },
+        "collection_namespaced_network_policy": {
+            "delete": "delete_collection_namespaced_network_policy"
+        },
+        "collection_namespaced_replica_set": {
+            "delete": "delete_collection_namespaced_replica_set"
+        },
+        "collection_pod_security_policy": {
+            "delete": "delete_collection_pod_security_policy"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "daemon_set_for_all_namespaces": {
+            "list": "list_daemon_set_for_all_namespaces"
+        },
+        "deployment_for_all_namespaces": {
+            "list": "list_deployment_for_all_namespaces"
+        },
+        "ingress_for_all_namespaces": {
+            "list": "list_ingress_for_all_namespaces"
+        },
+        "network_policy_for_all_namespaces": {
+            "list": "list_network_policy_for_all_namespaces"
+        },
+        "replica_set_for_all_namespaces": {
+            "list": "list_replica_set_for_all_namespaces"
+        },
+        "namespaced_daemon_set_status": {
+            "patch": "patch_namespaced_daemon_set_status",
+            "read": "read_namespaced_daemon_set_status",
+            "replace": "replace_namespaced_daemon_set_status"
+        },
+        "namespaced_deployment_scale": {
+            "patch": "patch_namespaced_deployment_scale",
+            "read": "read_namespaced_deployment_scale",
+            "replace": "replace_namespaced_deployment_scale"
+        },
+        "namespaced_deployment_status": {
+            "patch": "patch_namespaced_deployment_status",
+            "read": "read_namespaced_deployment_status",
+            "replace": "replace_namespaced_deployment_status"
+        },
+        "namespaced_ingress_status": {
+            "patch": "patch_namespaced_ingress_status",
+            "read": "read_namespaced_ingress_status",
+            "replace": "replace_namespaced_ingress_status"
+        },
+        "namespaced_replica_set_scale": {
+            "patch": "patch_namespaced_replica_set_scale",
+            "read": "read_namespaced_replica_set_scale",
+            "replace": "replace_namespaced_replica_set_scale"
+        },
+        "namespaced_replica_set_status": {
+            "patch": "patch_namespaced_replica_set_status",
+            "read": "read_namespaced_replica_set_status",
+            "replace": "replace_namespaced_replica_set_status"
+        },
+        "namespaced_replication_controller_dummy_scale": {
+            "patch": "patch_namespaced_replication_controller_dummy_scale",
+            "read": "read_namespaced_replication_controller_dummy_scale",
+            "replace": "replace_namespaced_replication_controller_dummy_scale"
+        }
+    },
+    "LogsApi": {
+        "file_handler": {
+            "log": "log_file_handler"
+        },
+        "file_list_handler": {
+            "log": "log_file_list_handler"
+        }
+    },
+    "NetworkingApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "NetworkingV1Api": {
+        "namespaced_network_policy": {
+            "create": "create_namespaced_network_policy",
+            "delete": "delete_namespaced_network_policy",
+            "list": "list_namespaced_network_policy",
+            "patch": "patch_namespaced_network_policy",
+            "read": "read_namespaced_network_policy",
+            "replace": "replace_namespaced_network_policy"
+        },
+        "collection_namespaced_network_policy": {
+            "delete": "delete_collection_namespaced_network_policy"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "network_policy_for_all_namespaces": {
+            "list": "list_network_policy_for_all_namespaces"
+        }
+    },
+    "PolicyApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "PolicyV1beta1Api": {
+        "namespaced_pod_disruption_budget": {
+            "create": "create_namespaced_pod_disruption_budget",
+            "delete": "delete_namespaced_pod_disruption_budget",
+            "list": "list_namespaced_pod_disruption_budget",
+            "patch": "patch_namespaced_pod_disruption_budget",
+            "read": "read_namespaced_pod_disruption_budget",
+            "replace": "replace_namespaced_pod_disruption_budget"
+        },
+        "pod_security_policy": {
+            "create": "create_pod_security_policy",
+            "delete": "delete_pod_security_policy",
+            "list": "list_pod_security_policy",
+            "patch": "patch_pod_security_policy",
+            "read": "read_pod_security_policy",
+            "replace": "replace_pod_security_policy"
+        },
+        "collection_namespaced_pod_disruption_budget": {
+            "delete": "delete_collection_namespaced_pod_disruption_budget"
+        },
+        "collection_pod_security_policy": {
+            "delete": "delete_collection_pod_security_policy"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "pod_disruption_budget_for_all_namespaces": {
+            "list": "list_pod_disruption_budget_for_all_namespaces"
+        },
+        "namespaced_pod_disruption_budget_status": {
+            "patch": "patch_namespaced_pod_disruption_budget_status",
+            "read": "read_namespaced_pod_disruption_budget_status",
+            "replace": "replace_namespaced_pod_disruption_budget_status"
+        }
+    },
+    "RbacAuthorizationApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "RbacAuthorizationV1Api": {
+        "cluster_role": {
+            "create": "create_cluster_role",
+            "delete": "delete_cluster_role",
+            "list": "list_cluster_role",
+            "patch": "patch_cluster_role",
+            "read": "read_cluster_role",
+            "replace": "replace_cluster_role"
+        },
+        "cluster_role_binding": {
+            "create": "create_cluster_role_binding",
+            "delete": "delete_cluster_role_binding",
+            "list": "list_cluster_role_binding",
+            "patch": "patch_cluster_role_binding",
+            "read": "read_cluster_role_binding",
+            "replace": "replace_cluster_role_binding"
+        },
+        "namespaced_role": {
+            "create": "create_namespaced_role",
+            "delete": "delete_namespaced_role",
+            "list": "list_namespaced_role",
+            "patch": "patch_namespaced_role",
+            "read": "read_namespaced_role",
+            "replace": "replace_namespaced_role"
+        },
+        "namespaced_role_binding": {
+            "create": "create_namespaced_role_binding",
+            "delete": "delete_namespaced_role_binding",
+            "list": "list_namespaced_role_binding",
+            "patch": "patch_namespaced_role_binding",
+            "read": "read_namespaced_role_binding",
+            "replace": "replace_namespaced_role_binding"
+        },
+        "collection_cluster_role": {
+            "delete": "delete_collection_cluster_role"
+        },
+        "collection_cluster_role_binding": {
+            "delete": "delete_collection_cluster_role_binding"
+        },
+        "collection_namespaced_role": {
+            "delete": "delete_collection_namespaced_role"
+        },
+        "collection_namespaced_role_binding": {
+            "delete": "delete_collection_namespaced_role_binding"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "role_binding_for_all_namespaces": {
+            "list": "list_role_binding_for_all_namespaces"
+        },
+        "role_for_all_namespaces": {
+            "list": "list_role_for_all_namespaces"
+        }
+    },
+    "RbacAuthorizationV1alpha1Api": {
+        "cluster_role": {
+            "create": "create_cluster_role",
+            "delete": "delete_cluster_role",
+            "list": "list_cluster_role",
+            "patch": "patch_cluster_role",
+            "read": "read_cluster_role",
+            "replace": "replace_cluster_role"
+        },
+        "cluster_role_binding": {
+            "create": "create_cluster_role_binding",
+            "delete": "delete_cluster_role_binding",
+            "list": "list_cluster_role_binding",
+            "patch": "patch_cluster_role_binding",
+            "read": "read_cluster_role_binding",
+            "replace": "replace_cluster_role_binding"
+        },
+        "namespaced_role": {
+            "create": "create_namespaced_role",
+            "delete": "delete_namespaced_role",
+            "list": "list_namespaced_role",
+            "patch": "patch_namespaced_role",
+            "read": "read_namespaced_role",
+            "replace": "replace_namespaced_role"
+        },
+        "namespaced_role_binding": {
+            "create": "create_namespaced_role_binding",
+            "delete": "delete_namespaced_role_binding",
+            "list": "list_namespaced_role_binding",
+            "patch": "patch_namespaced_role_binding",
+            "read": "read_namespaced_role_binding",
+            "replace": "replace_namespaced_role_binding"
+        },
+        "collection_cluster_role": {
+            "delete": "delete_collection_cluster_role"
+        },
+        "collection_cluster_role_binding": {
+            "delete": "delete_collection_cluster_role_binding"
+        },
+        "collection_namespaced_role": {
+            "delete": "delete_collection_namespaced_role"
+        },
+        "collection_namespaced_role_binding": {
+            "delete": "delete_collection_namespaced_role_binding"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "role_binding_for_all_namespaces": {
+            "list": "list_role_binding_for_all_namespaces"
+        },
+        "role_for_all_namespaces": {
+            "list": "list_role_for_all_namespaces"
+        }
+    },
+    "RbacAuthorizationV1beta1Api": {
+        "cluster_role": {
+            "create": "create_cluster_role",
+            "delete": "delete_cluster_role",
+            "list": "list_cluster_role",
+            "patch": "patch_cluster_role",
+            "read": "read_cluster_role",
+            "replace": "replace_cluster_role"
+        },
+        "cluster_role_binding": {
+            "create": "create_cluster_role_binding",
+            "delete": "delete_cluster_role_binding",
+            "list": "list_cluster_role_binding",
+            "patch": "patch_cluster_role_binding",
+            "read": "read_cluster_role_binding",
+            "replace": "replace_cluster_role_binding"
+        },
+        "namespaced_role": {
+            "create": "create_namespaced_role",
+            "delete": "delete_namespaced_role",
+            "list": "list_namespaced_role",
+            "patch": "patch_namespaced_role",
+            "read": "read_namespaced_role",
+            "replace": "replace_namespaced_role"
+        },
+        "namespaced_role_binding": {
+            "create": "create_namespaced_role_binding",
+            "delete": "delete_namespaced_role_binding",
+            "list": "list_namespaced_role_binding",
+            "patch": "patch_namespaced_role_binding",
+            "read": "read_namespaced_role_binding",
+            "replace": "replace_namespaced_role_binding"
+        },
+        "collection_cluster_role": {
+            "delete": "delete_collection_cluster_role"
+        },
+        "collection_cluster_role_binding": {
+            "delete": "delete_collection_cluster_role_binding"
+        },
+        "collection_namespaced_role": {
+            "delete": "delete_collection_namespaced_role"
+        },
+        "collection_namespaced_role_binding": {
+            "delete": "delete_collection_namespaced_role_binding"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "role_binding_for_all_namespaces": {
+            "list": "list_role_binding_for_all_namespaces"
+        },
+        "role_for_all_namespaces": {
+            "list": "list_role_for_all_namespaces"
+        }
+    },
+    "SchedulingApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "SchedulingV1alpha1Api": {
+        "priority_class": {
+            "create": "create_priority_class",
+            "delete": "delete_priority_class",
+            "list": "list_priority_class",
+            "patch": "patch_priority_class",
+            "read": "read_priority_class",
+            "replace": "replace_priority_class"
+        },
+        "collection_priority_class": {
+            "delete": "delete_collection_priority_class"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "SchedulingV1beta1Api": {
+        "priority_class": {
+            "create": "create_priority_class",
+            "delete": "delete_priority_class",
+            "list": "list_priority_class",
+            "patch": "patch_priority_class",
+            "read": "read_priority_class",
+            "replace": "replace_priority_class"
+        },
+        "collection_priority_class": {
+            "delete": "delete_collection_priority_class"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "SettingsApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "SettingsV1alpha1Api": {
+        "namespaced_pod_preset": {
+            "create": "create_namespaced_pod_preset",
+            "delete": "delete_namespaced_pod_preset",
+            "list": "list_namespaced_pod_preset",
+            "patch": "patch_namespaced_pod_preset",
+            "read": "read_namespaced_pod_preset",
+            "replace": "replace_namespaced_pod_preset"
+        },
+        "collection_namespaced_pod_preset": {
+            "delete": "delete_collection_namespaced_pod_preset"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        },
+        "pod_preset_for_all_namespaces": {
+            "list": "list_pod_preset_for_all_namespaces"
+        }
+    },
+    "StorageApi": {
+        "api_group": {
+            "get": "get_api_group"
+        }
+    },
+    "StorageV1Api": {
+        "storage_class": {
+            "create": "create_storage_class",
+            "delete": "delete_storage_class",
+            "list": "list_storage_class",
+            "patch": "patch_storage_class",
+            "read": "read_storage_class",
+            "replace": "replace_storage_class"
+        },
+        "collection_storage_class": {
+            "delete": "delete_collection_storage_class"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "StorageV1alpha1Api": {
+        "volume_attachment": {
+            "create": "create_volume_attachment",
+            "delete": "delete_volume_attachment",
+            "list": "list_volume_attachment",
+            "patch": "patch_volume_attachment",
+            "read": "read_volume_attachment",
+            "replace": "replace_volume_attachment"
+        },
+        "collection_volume_attachment": {
+            "delete": "delete_collection_volume_attachment"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "StorageV1beta1Api": {
+        "storage_class": {
+            "create": "create_storage_class",
+            "delete": "delete_storage_class",
+            "list": "list_storage_class",
+            "patch": "patch_storage_class",
+            "read": "read_storage_class",
+            "replace": "replace_storage_class"
+        },
+        "volume_attachment": {
+            "create": "create_volume_attachment",
+            "delete": "delete_volume_attachment",
+            "list": "list_volume_attachment",
+            "patch": "patch_volume_attachment",
+            "read": "read_volume_attachment",
+            "replace": "replace_volume_attachment"
+        },
+        "collection_storage_class": {
+            "delete": "delete_collection_storage_class"
+        },
+        "collection_volume_attachment": {
+            "delete": "delete_collection_volume_attachment"
+        },
+        "api_resources": {
+            "get": "get_api_resources"
+        }
+    },
+    "VersionApi": {
+        "code": {
+            "get": "get_code"
+        }
+    }
+}
