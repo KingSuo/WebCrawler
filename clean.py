@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-
 import os
 import re
-from multiprocessing import Pool
-
+import sys
 import json
+from multiprocessing import Pool
 
 import requests
 from bs4 import BeautifulSoup
+
+sys.setrecursionlimit(100000)  # 例如这里设置为十万
 
 
 class Clean:
@@ -82,8 +83,7 @@ class Clean:
         tr = tables[0].find_all("tr")
         methods = [i.td.a["href"].split('#')[-1] for i in tr[1:]]
         keys = {}
-        print(len(has_parameters))
-        print(len(methods))
+
         for i in range(len(methods)):
             if has_parameters[i]:
                 keys[methods[i]] = {}
@@ -103,21 +103,73 @@ class Clean:
                     name.string: {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}}
             j += 1
         print(keys)
-        return keys
+        api_verson = os.path.split(html_path)[1].split('.html')[0]
+
+        return (api_verson, keys)
 
     def save_parameters(self, ):
         pass
 
+def regular(html_data):
+    r = re.compile(
+        r'<h3><a aria-hidden="true" class="anchor" href="#parameters[\s\S]*<h3><a aria-hidden="true" class="anchor" href="#authorization')
+    result = r.findall(html_data)
+    new = result[0].split("<h3><a aria-hidden=\"true\" class=\"anchor\" href=\"#para")[1:]
+    has_parameters = [
+        False if "<p>This endpoint does not need any parameter.</p>" in i.split("Parameters</h3>", 1)[1] else True
+        for i in new]
+    print(has_parameters)
+    return has_parameters
+
+
+def get_parameters(html_path):
+    with open(html_path, encoding="utf-8") as fp:
+        soup = BeautifulSoup(fp, "html.parser")
+    with open(html_path, encoding="utf-8") as fp:
+        has_parameters = regular(fp.read())
+    tables = soup.find_all("table")
+    tr = tables[0].find_all("tr")
+    methods = [i.td.a["href"].split('#')[-1] for i in tr[1:]]
+    keys = {}
+
+    for i in range(len(methods)):
+        if has_parameters[i]:
+            keys[methods[i]] = {}
+        else:
+            keys[methods[i]] = None
+    parameters = tables[1:]
+    sub_tbodys = [i.tbody for i in parameters]
+    sub_trs = [i.find_all("tr") for i in sub_tbodys]
+    j = 0
+    for i in range(len(sub_trs)):
+        if keys[methods[j]] is None:
+            j += 1
+        trs = sub_trs[i]
+        for tr in trs:
+            name, Type, Description, Notes = tr.find_all("td")
+            keys[methods[j]] = {
+                name.string: {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}}
+        j += 1
+    print(keys)
+    api_verson = os.path.split(html_path)[1].split('.html')[0]
+
+    return (api_verson, keys)
+
 
 if __name__ == "__main__":
-    c = Clean()
-    html_paths = os.listdir(r"F:\workspace\git\WebCrawler\File\HTML")
 
-    html_path = r"F:\workspace\git\WebCrawler\File\HTML\ApiregistrationV1Api.html"
-    c.get_parameters(html_path)
-    #
-    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\ExtensionsV1beta1Api.html"
-    # c.get_parameters(html_path)
-    #
-    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\CoreV1Api.html"
-    # c.get_parameters(html_path)
+    # c = Clean()
+    filenames = os.listdir(r"F:\workspace\git\WebCrawler\File\HTML")
+    html_paths = [os.path.join(r"F:\workspace\git\WebCrawler\File\HTML", i) for i in filenames]
+    print(html_paths)
+    pool = Pool()
+    with open(r"F:\workspace\git\WebCrawler\File\K8s_API_Params.json", "w") as fp:
+        data = {}
+        result = []
+        for j in html_paths:
+            result.append(get_parameters(j))
+            print(result)
+            for i in result:
+                api_version, params = i
+                data[api_version] = params
+        json.dump(data, fp, indent=4)

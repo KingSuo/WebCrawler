@@ -52,18 +52,6 @@ class WebCrawler(object):
 
 
 if __name__ == "__main__":
-    # web_crawler = WebCrawler()
-    # url = "https://github.com/kubernetes-client/python/tree/master/kubernetes"
-    # web_crawler.get_urls(url)
-
-    # url = "https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/AppsV1Api.md#create_namespaced_deployment"
-    # result = requests.get(url)
-    # api_vision = url.split(".md")[0].split("/")[-1]
-    # method = url.split("#")[1]
-    # print(api_vision)
-    # print(method)
-    # print(soup)
-    # web_crawler.save_html(api_vision, method, soup)
 
     path = "F:\workspace\git\WebCrawler\File\AppsV1Api\create_namespaced_deployment.html"
     soup = BeautifulSoup(open(path, encoding="utf-8"), "html.parser")
