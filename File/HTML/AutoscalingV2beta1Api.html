@@ -1,0 +1,1680 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link href="https://assets-cdn.github.com" rel="dns-prefetch"/>
+<link href="https://avatars0.githubusercontent.com" rel="dns-prefetch"/>
+<link href="https://avatars1.githubusercontent.com" rel="dns-prefetch"/>
+<link href="https://avatars2.githubusercontent.com" rel="dns-prefetch"/>
+<link href="https://avatars3.githubusercontent.com" rel="dns-prefetch"/>
+<link href="https://github-cloud.s3.amazonaws.com" rel="dns-prefetch"/>
+<link href="https://user-images.githubusercontent.com/" rel="dns-prefetch"/>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-01356238c65ce56a395237b592b58668.css" integrity="sha512-qQ+v+W1uJYfDMrQ/cwCVI+AGTsn1yi4rCU6KX45obe52BoF+WiHNeQ11u63iJA05vyivY57xNbhAsyK4/j1ZIQ==" media="all" rel="stylesheet">
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-a7e9a45d2e105efd3c1662a142599b6e.css" integrity="sha512-t0NF/zTUOsfEylXqNma8KFz+xQCKaQoQNHHVCMWmDddHyQElu8fMjlagXnjvLlZZRR0WO+8FzRfNrNiTXBqjug==" media="all" rel="stylesheet">
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-99075769314a73391cea9aa2907a29f9.css" integrity="sha512-2jE+5s+6LV2ckEshC+YTwb0A/IhES9iLMcwfkkybRMMGemXcEjAx8wdd2ZbbVr1dYBJt+fkCaR+UvXiybFr/sA==" media="all" rel="stylesheet">
+<meta content="width=device-width" name="viewport"/>
+<title>python/AutoscalingV2beta1Api.md at master · kubernetes-client/python · GitHub</title>
+<meta content="Official Python client library for kubernetes" name="description"/>
+<link href="/opensearch.xml" rel="search" title="GitHub" type="application/opensearchdescription+xml"/>
+<link href="https://github.com/fluidicon.png" rel="fluid-icon" title="GitHub"/>
+<meta content="1401488693436528" property="fb:app_id"/>
+<meta content="https://avatars3.githubusercontent.com/u/26615988?s=400&amp;v=4" property="og:image"><meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="kubernetes-client/python" property="og:title"><meta content="https://github.com/kubernetes-client/python" property="og:url"/><meta content="python - Official Python client library for kubernetes" property="og:description"/>
+<link href="https://assets-cdn.github.com/" rel="assets"/>
+<meta content="1000" name="pjax-timeout"/>
+<meta content="27AA:6744:648B8C:904D31:5B683669" data-pjax-transient="" name="request-id"/>
+<meta data-pjax-transient="" name="selected-link" value="repo_source"/>
+<meta content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU" name="google-site-verification"/>
+<meta content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA" name="google-site-verification"/>
+<meta content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc" name="google-site-verification"/>
+<meta content="UA-3769691-2" name="google-analytics"/>
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="github" name="octolytics-app-id"><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url"><meta content="27AA:6744:648B8C:904D31:5B683669" name="octolytics-dimension-request_id"><meta content="ap-southeast-1" name="octolytics-dimension-region_edge"><meta content="iad" name="octolytics-dimension-region_render">
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location">
+<meta class="js-ga-set" content="Logged Out" name="dimension1"/>
+<meta content="github.com" name="hostname"/>
+<meta content="" name="user-login"/>
+<meta content="github.com" name="expected-hostname"/>
+<meta content="MGM1Y2Q3NDQxZTNhMGUwMDFjYmFmMzJmYjZhMjQ0MzQ4ZjUyYjAxNTNkNWMzOTk2ODJkMDBhZTlhMzAzOWNkNHx7InJlbW90ZV9hZGRyZXNzIjoiMTE2LjIyOC4zMi4xODIiLCJyZXF1ZXN0X2lkIjoiMjdBQTo2NzQ0OjY0OEI4Qzo5MDREMzE6NUI2ODM2NjkiLCJ0aW1lc3RhbXAiOjE1MzM1NTYzMjksImhvc3QiOiJnaXRodWIuY29tIn0=" name="js-proxy-site-detection-payload"/>
+<meta content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES" name="enabled-features"/>
+<meta content="1e7b5c150ce6363a5103b38ba2c3577de0767cf3" name="html-safe-nonce"/>
+<meta content="89ca70ec1e332512d3717d42fb811d93" http-equiv="x-pjax-version"/>
+<link href="https://github.com/kubernetes-client/python/commits/master.atom" rel="alternate" title="Recent Commits to python:master" type="application/atom+xml"/>
+<meta content="github.com/kubernetes-client/python git https://github.com/kubernetes-client/python.git" name="go-import"/>
+<meta content="26615988" name="octolytics-dimension-user_id"><meta content="kubernetes-client" name="octolytics-dimension-user_login"><meta content="72473727" name="octolytics-dimension-repository_id"><meta content="kubernetes-client/python" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="72473727" name="octolytics-dimension-repository_network_root_id"><meta content="kubernetes-client/python" name="octolytics-dimension-repository_network_root_nwo"><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown">
+<link data-pjax-transient="" href="https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md" rel="canonical"/>
+<meta content="https://api.github.com/_private/browser/stats" name="browser-stats-url"/>
+<meta content="https://api.github.com/_private/browser/errors" name="browser-errors-url"/>
+<link color="#000000" href="https://assets-cdn.github.com/pinned-octocat.svg" rel="mask-icon"/>
+<link class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="#1e2327" name="theme-color"/>
+<link crossorigin="use-credentials" href="/manifest.json" rel="manifest"/>
+</meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></link></link></link></head>
+<body class="logged-out env-production page-blob">
+<div class="position-relative js-header-wrapper ">
+<a class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content" href="#start-of-content" tabindex="1">Skip to content</a>
+<div class="pjax-loader-bar" id="js-pjax-loader-bar"><div class="progress"></div></div>
+<header class="Header header-logged-out position-relative f4 py-3" role="banner">
+<div class="container-lg d-flex px-3">
+<div class="d-flex flex-justify-between flex-items-center">
+<a aria-label="Homepage" class="header-logo-invertocat my-0" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark; experiment:site_header_dropdowns; group:control" href="https://github.com/">
+<svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewbox="0 0 16 16" width="32"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+<div class="HeaderMenu d-flex flex-justify-between flex-auto">
+<nav class="mt-0">
+<ul class="d-flex list-style-none">
+<li class="ml-2">
+<a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:features; experiment:site_header_dropdowns; group:control" data-selected-links="/features /features/project-management /features/code-review /features/project-management /features/integrations /features" href="/features">
+                    Features
+</a> </li>
+<li class="ml-4">
+<a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:business; experiment:site_header_dropdowns; group:control" data-selected-links="/business /business/security /business/customers /business" href="/business">
+                    Business
+</a> </li>
+<li class="ml-4">
+<a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:explore; experiment:site_header_dropdowns; group:control" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+                    Explore
+</a> </li>
+<li class="ml-4">
+<a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:marketplace; experiment:site_header_dropdowns; group:control" data-selected-links=" /marketplace" href="/marketplace">
+                        Marketplace
+</a> </li>
+<li class="ml-4">
+<a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:pricing; experiment:site_header_dropdowns; group:control" data-selected-links="/pricing /pricing/developer /pricing/team /pricing/business-hosted /pricing/business-enterprise /pricing" href="/pricing">
+                    Pricing
+</a> </li>
+</ul>
+</nav>
+<div class="d-flex">
+<div class="d-lg-flex flex-items-center mr-3">
+<div aria-expanded="true" aria-haspopup="listbox" aria-label="Search or jump to" aria-owns="jump-to-results" class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="search combobox">
+<div class="position-relative">
+<!-- '"` --><!-- </textarea></xmp> --></div></div></div></div></div></div></header></div></body></html><form accept-charset="UTF-8" action="/kubernetes-client/python/search" class="js-site-search-form" data-scope-id="72473727" data-scope-type="Repository" data-scoped-search-url="/kubernetes-client/python/search" data-unscoped-search-url="/search" method="get"><input name="utf8" type="hidden" value="✓"/>
+<label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+<input aria-autocomplete="list" aria-controls="jump-to-results" autocapitalize="off" autocomplete="off" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=TWy6zMcjdci2H6fzYGmmB83B90tINJWwzj7zphaeX1nHoCOUlP5oW3JnQdbtmxd9avAjGfqv66xTF3J/ZEoxXg==" data-scoped-placeholder="Search" data-unscoped-placeholder="Search GitHub" name="q" placeholder="Search" spellcheck="false" type="text" value=""/>
+<input class="js-site-search-type-field" name="type" type="hidden"/>
+<img alt="" class="mr-2 header-search-key-slash" src="https://assets-cdn.github.com/images/search-shortcut-hint.svg"/>
+<div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+<ul class="d-none js-jump-to-suggestions-template-container">
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
+<a class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="" tabindex="-1">
+<div class="jump-to-octicon js-jump-to-octicon mr-2 text-center d-none"></div>
+<img alt="" aria-label="Team" class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar" height="28" src="" width="28"/>
+<div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+</div>
+<div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+<span aria-label="in this repository" class="js-jump-to-badge-search-text-default d-none">
+                        In this repository
+                      </span>
+<span aria-label="in all of GitHub" class="js-jump-to-badge-search-text-global d-none">
+                        All GitHub
+                      </span>
+<span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+</div>
+<div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+</div>
+</a>
+</li>
+<svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0 js-jump-to-repo-octicon-template" height="16" role="img" title="Repository" version="1.1" viewbox="0 0 12 16" width="16"><path d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" fill-rule="evenodd"></path></svg>
+<svg aria-label="Project" class="octicon octicon-project flex-shrink-0 js-jump-to-project-octicon-template" height="16" role="img" title="Project" version="1.1" viewbox="0 0 15 16" width="16"><path d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" fill-rule="evenodd"></path></svg>
+<svg aria-label="Search" class="octicon octicon-search flex-shrink-0 js-jump-to-search-octicon-template" height="16" role="img" title="Search" version="1.1" viewbox="0 0 16 16" width="16"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg>
+</ul>
+<ul class="d-none js-jump-to-no-results-template-container">
+<li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
+<span class="text-gray">No suggested jump to results</span>
+</li>
+</ul>
+<ul class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container" id="jump-to-results">
+<li class="d-flex flex-justify-center flex-items-center p-0 f5">
+<img alt="Octocat Spinner Icon" class="m-2" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="28"/>
+</li>
+</ul>
+</div>
+</label>
+</form> 
+
+
+<span class="d-inline-block">
+<div class="HeaderNavlink px-0 py-2 m-0">
+<a class="text-bold text-white no-underline" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in; experiment:site_header_dropdowns; group:control" href="/login?return_to=%2Fkubernetes-client%2Fpython%2Fblob%2Fmaster%2Fkubernetes%2Fdocs%2FAutoscalingV2beta1Api.md">Sign in</a>
+<span class="text-gray">or</span>
+<a class="text-bold text-white no-underline" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up; experiment:site_header_dropdowns; group:control" href="/join?source=header-repo">Sign up</a>
+</div>
+</span>
+
+
+
+
+
+<div class="show-on-focus" id="start-of-content"></div>
+<div id="js-flash-container">
+</div>
+<div class="application-main " role="main">
+<div class="" itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+<div data-pjax-container="" id="js-repo-pjax-container">
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav ">
+<div class="repohead-details-container clearfix container">
+<ul class="pagehead-actions">
+<li>
+<a aria-label="You must be signed in to watch a repository" class="btn btn-sm btn-with-count tooltipped tooltipped-n" href="/login?return_to=%2Fkubernetes-client%2Fpython" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-eye v-align-text-bottom" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z" fill-rule="evenodd"></path></svg>
+    Watch
+  </a>
+<a aria-label="48 users are watching this repository" class="social-count" href="/kubernetes-client/python/watchers">
+    48
+  </a>
+</li>
+<li>
+<a aria-label="You must be signed in to star a repository" class="btn btn-sm btn-with-count tooltipped tooltipped-n" href="/login?return_to=%2Fkubernetes-client%2Fpython" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-star v-align-text-bottom" height="16" version="1.1" viewbox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z" fill-rule="evenodd"></path></svg>
+    Star
+  </a>
+<a aria-label="866 users starred this repository" class="social-count js-social-count" href="/kubernetes-client/python/stargazers">
+      866
+    </a>
+</li>
+<li>
+<a aria-label="You must be signed in to fork a repository" class="btn btn-sm btn-with-count tooltipped tooltipped-n" href="/login?return_to=%2Fkubernetes-client%2Fpython" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-repo-forked v-align-text-bottom" height="16" version="1.1" viewbox="0 0 10 16" width="10"><path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" fill-rule="evenodd"></path></svg>
+        Fork
+      </a>
+<a aria-label="489 users forked this repository" class="social-count" href="/kubernetes-client/python/network/members">
+      489
+    </a>
+</li>
+</ul>
+<h1 class="public ">
+<svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" fill-rule="evenodd"></path></svg>
+<span class="author" itemprop="author"><a class="url fn" href="/kubernetes-client" rel="author">kubernetes-client</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/kubernetes-client/python">python</a></strong>
+</h1>
+</div>
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" data-pjax="#js-repo-pjax-container" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation">
+<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /kubernetes-client/python" href="/kubernetes-client/python" itemprop="url">
+<svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewbox="0 0 14 16" width="14"><path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z" fill-rule="evenodd"></path></svg>
+<span itemprop="name">Code</span>
+<meta content="1" itemprop="position"/>
+</a> </span>
+<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /kubernetes-client/python/issues" href="/kubernetes-client/python/issues" itemprop="url">
+<svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewbox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd"></path></svg>
+<span itemprop="name">Issues</span>
+<span class="Counter">173</span>
+<meta content="2" itemprop="position"/>
+</a> </span>
+<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls checks /kubernetes-client/python/pulls" href="/kubernetes-client/python/pulls" itemprop="url">
+<svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" fill-rule="evenodd"></path></svg>
+<span itemprop="name">Pull requests</span>
+<span class="Counter">12</span>
+<meta content="3" itemprop="position"/>
+</a> </span>
+<a class="js-selected-navigation-item reponav-item" data-hotkey="g b" data-selected-links="repo_projects new_repo_project repo_project /kubernetes-client/python/projects" href="/kubernetes-client/python/projects">
+<svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewbox="0 0 15 16" width="15"><path d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" fill-rule="evenodd"></path></svg>
+      Projects
+      <span class="Counter">0</span>
+</a>
+<a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /kubernetes-client/python/pulse" href="/kubernetes-client/python/pulse">
+<svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z" fill-rule="evenodd"></path></svg>
+    Insights
+</a>
+</nav>
+</div>
+<div class="container new-discussion-timeline experiment-repo-nav ">
+<div class="repository-content ">
+<a class="d-none js-permalink-shortcut" data-hotkey="y" href="/kubernetes-client/python/blob/3c4620b7cabaf068a1a8a016bb406c7c7d9dcf52/kubernetes/docs/AutoscalingV2beta1Api.md">Permalink</a>
+<!-- blob contrib key: blob_contributors:v21:cad4fa04b3ca11c2efdafc722f3391ba -->
+<div class="signup-prompt-bg rounded-1">
+<div class="signup-prompt p-4 text-center mb-4 rounded-1">
+<div class="position-relative">
+<!-- '"` --><!-- </textarea></xmp> --></div></div></div></div></div></div></div></div><form accept-charset="UTF-8" action="/site/dismiss_signup_prompt" method="post"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="HWgrpoCRD3vxBJqZqKRhprhfdJF8iC7LV3b5LCrmkIbFBwustBaO/deBy/fx1aW21yqktlVV27LWLJLWYcUoNQ==">
+<button class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss" type="submit">
+              Dismiss
+            </button>
+</input></input></form> <h3 class="pt-2">Join GitHub today</h3>
+<p class="col-6 mx-auto">GitHub is home to over 28 million developers working together to host and review code, manage projects, and build software together.</p>
+<a class="btn btn-primary" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up" href="/join?source=prompt-blob-show">Sign up</a>
+
+
+
+<div class="file-navigation">
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+<button aria-expanded="false" aria-haspopup="true" aria-label="Switch branches or tags" class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" type="button">
+<i>Branch:</i>
+<span class="js-select-button css-truncate-target">master</span>
+</button>
+<div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="">
+<div class="select-menu-modal">
+<div class="select-menu-header">
+<svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewbox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-title">Switch branches/tags</span>
+</div>
+<div class="select-menu-filters">
+<div class="select-menu-text-filter">
+<input aria-label="Filter branches/tags" class="form-control js-filterable-field js-navigation-enable" id="context-commitish-filter-field" placeholder="Filter branches/tags" type="text"/>
+</div>
+<div class="select-menu-tabs">
+<ul>
+<li class="select-menu-tab">
+<a class="js-select-menu-tab" data-filter-placeholder="Filter branches/tags" data-tab-filter="branches" href="#" role="tab">Branches</a>
+</li>
+<li class="select-menu-tab">
+<a class="js-select-menu-tab" data-filter-placeholder="Find a tag…" data-tab-filter="tags" href="#" role="tab">Tags</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+<div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+<a class="select-menu-item js-navigation-item js-navigation-open selected" data-name="master" data-skip-pjax="true" href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="mbohlool-patch-1" data-skip-pjax="true" href="/kubernetes-client/python/blob/mbohlool-patch-1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                mbohlool-patch-1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="mbohlool-patch-2" data-skip-pjax="true" href="/kubernetes-client/python/blob/mbohlool-patch-2/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                mbohlool-patch-2
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-1.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-1.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-1.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-2.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-2.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-2.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-3.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-3.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-3.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-4.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-4.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-4.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-5.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-5.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-5.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-6.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-6.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-6.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="release-7.0" data-skip-pjax="true" href="/kubernetes-client/python/blob/release-7.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release-7.0
+              </span>
+</a>
+</div>
+<div class="select-menu-no-results">Nothing to show</div>
+</div>
+<div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+<div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v7.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v7.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v7.0.0b1">
+                v7.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v7.0.0a1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v7.0.0a1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v7.0.0a1">
+                v7.0.0a1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v5.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/v5.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v5.0.0">
+                v5.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v4.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/v4.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v4.0.0">
+                v4.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v4.0.0a1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v4.0.0a1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v4.0.0a1">
+                v4.0.0a1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v3.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/v3.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v3.0.0">
+                v3.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v3.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v3.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v3.0.0b1">
+                v3.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v3.0.0a1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v3.0.0a1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v3.0.0a1">
+                v3.0.0a1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v2.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/v2.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v2.0.0">
+                v2.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v2.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v2.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v2.0.0b1">
+                v2.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v2.0.0a1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v2.0.0a1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v2.0.0a1">
+                v2.0.0a1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.2" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.2/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.2">
+                v1.0.2
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.1">
+                v1.0.1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0">
+                v1.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0b3" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0b3/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0b3">
+                v1.0.0b3
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0b2" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0b2/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0b2">
+                v1.0.0b2
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0b1">
+                v1.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0a5" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0a5/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0a5">
+                v1.0.0a5
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0a4" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0a4/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0a4">
+                v1.0.0a4
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0a3" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0a3/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0a3">
+                v1.0.0a3
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="v1.0.0-alpha.2" data-skip-pjax="true" href="/kubernetes-client/python/tree/v1.0.0-alpha.2/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="v1.0.0-alpha.2">
+                v1.0.0-alpha.2
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="6.0.0" data-skip-pjax="true" href="/kubernetes-client/python/tree/6.0.0/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="6.0.0">
+                6.0.0
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="6.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/6.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="6.0.0b1">
+                6.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="5.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/5.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="5.0.0b1">
+                5.0.0b1
+              </span>
+</a>
+<a class="select-menu-item js-navigation-item js-navigation-open " data-name="4.0.0b1" data-skip-pjax="true" href="/kubernetes-client/python/tree/4.0.0b1/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">
+<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" fill-rule="evenodd"></path></svg>
+<span class="select-menu-item-text css-truncate-target" title="4.0.0b1">
+                4.0.0b1
+              </span>
+</a>
+</div>
+<div class="select-menu-no-results">Nothing to show</div>
+</div>
+</div>
+</div>
+</div>
+<div class="BtnGroup float-right">
+<a class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-hotkey="t" data-pjax="" href="/kubernetes-client/python/find/master">
+        Find file
+      </a>
+<clipboard-copy class="btn btn-sm BtnGroup-item" for="blob-path">
+        Copy path
+      </clipboard-copy>
+</div>
+<div class="breadcrumb" id="blob-path">
+<span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/kubernetes-client/python"><span>python</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/kubernetes-client/python/tree/master/kubernetes"><span>kubernetes</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/kubernetes-client/python/tree/master/kubernetes/docs"><span>docs</span></a></span><span class="separator">/</span><strong class="final-path">AutoscalingV2beta1Api.md</strong>
+</div>
+</div>
+<include-fragment class="commit-tease commit-loader" src="/kubernetes-client/python/contributors/master/kubernetes/docs/AutoscalingV2beta1Api.md">
+<div>
+      Fetching contributors…
+    </div>
+<div class="commit-tease-contributors">
+<img alt="" class="loader-loading float-left" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16">
+<span class="loader-error">Cannot retrieve contributors at this time</span>
+</img></div>
+</include-fragment>
+<div class="file">
+<div class="file-header">
+<div class="file-actions">
+<div class="BtnGroup">
+<a class="btn btn-sm BtnGroup-item" href="/kubernetes-client/python/raw/master/kubernetes/docs/AutoscalingV2beta1Api.md" id="raw-url">Raw</a>
+<a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/kubernetes-client/python/blame/master/kubernetes/docs/AutoscalingV2beta1Api.md">Blame</a>
+<a class="btn btn-sm BtnGroup-item" href="/kubernetes-client/python/commits/master/kubernetes/docs/AutoscalingV2beta1Api.md" rel="nofollow">History</a>
+</div>
+<button aria-label="You must be signed in to make or propose changes" class="btn-octicon disabled tooltipped tooltipped-nw" type="button">
+<svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewbox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z" fill-rule="evenodd"></path></svg>
+</button>
+<button aria-label="You must be signed in to make or propose changes" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw" type="button">
+<svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+<div class="file-info">
+      757 lines (549 sloc)
+      <span class="file-info-divider"></span>
+    52.8 KB
+  </div>
+</div>
+<div class="readme blob instapaper_body" id="readme">
+<article class="markdown-body entry-content" itemprop="text"><h1><a aria-hidden="true" class="anchor" href="#kubernetesclientautoscalingv2beta1api" id="user-content-kubernetesclientautoscalingv2beta1api"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>kubernetes.client.AutoscalingV2beta1Api</h1>
+<p>All URIs are relative to <em><a href="https://localhost" rel="nofollow">https://localhost</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#create_namespaced_horizontal_pod_autoscaler"><strong>create_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>POST</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#delete_collection_namespaced_horizontal_pod_autoscaler"><strong>delete_collection_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>DELETE</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#delete_namespaced_horizontal_pod_autoscaler"><strong>delete_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>DELETE</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#get_api_resources"><strong>get_api_resources</strong></a></td>
+<td><strong>GET</strong> /apis/autoscaling/v2beta1/</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#list_horizontal_pod_autoscaler_for_all_namespaces"><strong>list_horizontal_pod_autoscaler_for_all_namespaces</strong></a></td>
+<td><strong>GET</strong> /apis/autoscaling/v2beta1/horizontalpodautoscalers</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#list_namespaced_horizontal_pod_autoscaler"><strong>list_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>GET</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#patch_namespaced_horizontal_pod_autoscaler"><strong>patch_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>PATCH</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#patch_namespaced_horizontal_pod_autoscaler_status"><strong>patch_namespaced_horizontal_pod_autoscaler_status</strong></a></td>
+<td><strong>PATCH</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#read_namespaced_horizontal_pod_autoscaler"><strong>read_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>GET</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#read_namespaced_horizontal_pod_autoscaler_status"><strong>read_namespaced_horizontal_pod_autoscaler_status</strong></a></td>
+<td><strong>GET</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#replace_namespaced_horizontal_pod_autoscaler"><strong>replace_namespaced_horizontal_pod_autoscaler</strong></a></td>
+<td><strong>PUT</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/AutoscalingV2beta1Api.md#replace_namespaced_horizontal_pod_autoscaler_status"><strong>replace_namespaced_horizontal_pod_autoscaler_status</strong></a></td>
+<td><strong>PUT</strong> /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status</td>
+<td></td>
+</tr></tbody></table>
+<h1><a aria-hidden="true" class="anchor" href="#create_namespaced_horizontal_pod_autoscaler" id="user-content-create_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>create_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler create_namespaced_horizontal_pod_autoscaler(namespace, body, pretty=pretty)</p>
+</blockquote>
+<p>create a HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example" id="user-content-example"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> kubernetes.client.V2beta1HorizontalPodAutoscaler() <span class="pl-c"><span class="pl-c">#</span> V2beta1HorizontalPodAutoscaler | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.create_namespaced_horizontal_pod_autoscaler(namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;create_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters" id="user-content-parameters"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type" id="user-content-return-type"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization" id="user-content-authorization"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers" id="user-content-http-request-headers"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#delete_collection_namespaced_horizontal_pod_autoscaler" id="user-content-delete_collection_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>delete_collection_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V1Status delete_collection_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)</p>
+</blockquote>
+<p>delete collection of HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-1" id="user-content-example-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+_continue <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>_continue_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)</span>
+field_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>field_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)</span>
+include_uninitialized <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | If true, partially initialized resources are included in the response. (optional)</span>
+label_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>label_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)</span>
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>resource_version_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv. (optional)</span>
+timeout_seconds <span class="pl-k">=</span> <span class="pl-c1">56</span> <span class="pl-c"><span class="pl-c">#</span> int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)</span>
+watch <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.delete_collection_namespaced_horizontal_pod_autoscaler(namespace, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty, <span class="pl-v">_continue</span><span class="pl-k">=</span>_continue, <span class="pl-v">field_selector</span><span class="pl-k">=</span>field_selector, <span class="pl-v">include_uninitialized</span><span class="pl-k">=</span>include_uninitialized, <span class="pl-v">label_selector</span><span class="pl-k">=</span>label_selector, <span class="pl-v">limit</span><span class="pl-k">=</span>limit, <span class="pl-v">resource_version</span><span class="pl-k">=</span>resource_version, <span class="pl-v">timeout_seconds</span><span class="pl-k">=</span>timeout_seconds, <span class="pl-v">watch</span><span class="pl-k">=</span>watch)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;delete_collection_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-1" id="user-content-parameters-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>_continue</strong></td>
+<td><strong>str</strong></td>
+<td>The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>field_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their fields. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>include_uninitialized</strong></td>
+<td><strong>bool</strong></td>
+<td>If true, partially initialized resources are included in the response.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>label_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their labels. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>resource_version</strong></td>
+<td><strong>str</strong></td>
+<td>When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>watch</strong></td>
+<td><strong>bool</strong></td>
+<td>Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-1" id="user-content-return-type-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V1Status.md"><strong>V1Status</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-1" id="user-content-authorization-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-1" id="user-content-http-request-headers-1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#delete_namespaced_horizontal_pod_autoscaler" id="user-content-delete_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>delete_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V1Status delete_namespaced_horizontal_pod_autoscaler(name, namespace, body, pretty=pretty, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)</p>
+</blockquote>
+<p>delete a HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-2" id="user-content-example-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> kubernetes.client.V1DeleteOptions() <span class="pl-c"><span class="pl-c">#</span> V1DeleteOptions | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+grace_period_seconds <span class="pl-k">=</span> <span class="pl-c1">56</span> <span class="pl-c"><span class="pl-c">#</span> int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)</span>
+orphan_dependents <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)</span>
+propagation_policy <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>propagation_policy_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.delete_namespaced_horizontal_pod_autoscaler(name, namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty, <span class="pl-v">grace_period_seconds</span><span class="pl-k">=</span>grace_period_seconds, <span class="pl-v">orphan_dependents</span><span class="pl-k">=</span>orphan_dependents, <span class="pl-v">propagation_policy</span><span class="pl-k">=</span>propagation_policy)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;delete_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-2" id="user-content-parameters-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V1DeleteOptions.md"><strong>V1DeleteOptions</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>grace_period_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>orphan_dependents</strong></td>
+<td><strong>bool</strong></td>
+<td>Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the &amp;quot;orphan&amp;quot; finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>propagation_policy</strong></td>
+<td><strong>str</strong></td>
+<td>Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-2" id="user-content-return-type-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V1Status.md"><strong>V1Status</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-2" id="user-content-authorization-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-2" id="user-content-http-request-headers-2"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#get_api_resources" id="user-content-get_api_resources"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>get_api_resources</strong></h1>
+<blockquote>
+<p>V1APIResourceList get_api_resources()</p>
+</blockquote>
+<p>get available resources</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-3" id="user-content-example-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.get_api_resources()
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;get_api_resources: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-3" id="user-content-parameters-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-3" id="user-content-return-type-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V1APIResourceList.md"><strong>V1APIResourceList</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-3" id="user-content-authorization-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-3" id="user-content-http-request-headers-3"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#list_horizontal_pod_autoscaler_for_all_namespaces" id="user-content-list_horizontal_pod_autoscaler_for_all_namespaces"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>list_horizontal_pod_autoscaler_for_all_namespaces</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscalerList list_horizontal_pod_autoscaler_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)</p>
+</blockquote>
+<p>list or watch objects of kind HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-4" id="user-content-example-4"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+_continue <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>_continue_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)</span>
+field_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>field_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)</span>
+include_uninitialized <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | If true, partially initialized resources are included in the response. (optional)</span>
+label_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>label_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)</span>
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+resource_version <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>resource_version_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv. (optional)</span>
+timeout_seconds <span class="pl-k">=</span> <span class="pl-c1">56</span> <span class="pl-c"><span class="pl-c">#</span> int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)</span>
+watch <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.list_horizontal_pod_autoscaler_for_all_namespaces(<span class="pl-v">_continue</span><span class="pl-k">=</span>_continue, <span class="pl-v">field_selector</span><span class="pl-k">=</span>field_selector, <span class="pl-v">include_uninitialized</span><span class="pl-k">=</span>include_uninitialized, <span class="pl-v">label_selector</span><span class="pl-k">=</span>label_selector, <span class="pl-v">limit</span><span class="pl-k">=</span>limit, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty, <span class="pl-v">resource_version</span><span class="pl-k">=</span>resource_version, <span class="pl-v">timeout_seconds</span><span class="pl-k">=</span>timeout_seconds, <span class="pl-v">watch</span><span class="pl-k">=</span>watch)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;list_horizontal_pod_autoscaler_for_all_namespaces: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-4" id="user-content-parameters-4"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>_continue</strong></td>
+<td><strong>str</strong></td>
+<td>The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>field_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their fields. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>include_uninitialized</strong></td>
+<td><strong>bool</strong></td>
+<td>If true, partially initialized resources are included in the response.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>label_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their labels. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>resource_version</strong></td>
+<td><strong>str</strong></td>
+<td>When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>watch</strong></td>
+<td><strong>bool</strong></td>
+<td>Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-4" id="user-content-return-type-4"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscalerList.md"><strong>V2beta1HorizontalPodAutoscalerList</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-4" id="user-content-authorization-4"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-4" id="user-content-http-request-headers-4"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf, application/json;stream=watch, application/vnd.kubernetes.protobuf;stream=watch</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#list_namespaced_horizontal_pod_autoscaler" id="user-content-list_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>list_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscalerList list_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)</p>
+</blockquote>
+<p>list or watch objects of kind HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-5" id="user-content-example-5"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+_continue <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>_continue_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)</span>
+field_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>field_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)</span>
+include_uninitialized <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | If true, partially initialized resources are included in the response. (optional)</span>
+label_selector <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>label_selector_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)</span>
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>resource_version_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv. (optional)</span>
+timeout_seconds <span class="pl-k">=</span> <span class="pl-c1">56</span> <span class="pl-c"><span class="pl-c">#</span> int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)</span>
+watch <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.list_namespaced_horizontal_pod_autoscaler(namespace, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty, <span class="pl-v">_continue</span><span class="pl-k">=</span>_continue, <span class="pl-v">field_selector</span><span class="pl-k">=</span>field_selector, <span class="pl-v">include_uninitialized</span><span class="pl-k">=</span>include_uninitialized, <span class="pl-v">label_selector</span><span class="pl-k">=</span>label_selector, <span class="pl-v">limit</span><span class="pl-k">=</span>limit, <span class="pl-v">resource_version</span><span class="pl-k">=</span>resource_version, <span class="pl-v">timeout_seconds</span><span class="pl-k">=</span>timeout_seconds, <span class="pl-v">watch</span><span class="pl-k">=</span>watch)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;list_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-5" id="user-content-parameters-5"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>_continue</strong></td>
+<td><strong>str</strong></td>
+<td>The continue option should be set when retrieving more results from the server. Since this value is server defined, kubernetes.clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the kubernetes.client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>field_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their fields. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>include_uninitialized</strong></td>
+<td><strong>bool</strong></td>
+<td>If true, partially initialized resources are included in the response.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>label_selector</strong></td>
+<td><strong>str</strong></td>
+<td>A selector to restrict the list of returned objects by their labels. Defaults to everything.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and kubernetes.clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, kubernetes.clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a kubernetes.client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>resource_version</strong></td>
+<td><strong>str</strong></td>
+<td>When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>watch</strong></td>
+<td><strong>bool</strong></td>
+<td>Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-5" id="user-content-return-type-5"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscalerList.md"><strong>V2beta1HorizontalPodAutoscalerList</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-5" id="user-content-authorization-5"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-5" id="user-content-http-request-headers-5"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf, application/json;stream=watch, application/vnd.kubernetes.protobuf;stream=watch</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#patch_namespaced_horizontal_pod_autoscaler" id="user-content-patch_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>patch_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler patch_namespaced_horizontal_pod_autoscaler(name, namespace, body, pretty=pretty)</p>
+</blockquote>
+<p>partially update the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-6" id="user-content-example-6"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> <span class="pl-c1">NULL</span> <span class="pl-c"><span class="pl-c">#</span> object | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.patch_namespaced_horizontal_pod_autoscaler(name, namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;patch_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-6" id="user-content-parameters-6"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><strong>object</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-6" id="user-content-return-type-6"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-6" id="user-content-authorization-6"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-6" id="user-content-http-request-headers-6"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json</li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#patch_namespaced_horizontal_pod_autoscaler_status" id="user-content-patch_namespaced_horizontal_pod_autoscaler_status"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>patch_namespaced_horizontal_pod_autoscaler_status</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler patch_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, pretty=pretty)</p>
+</blockquote>
+<p>partially update status of the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-7" id="user-content-example-7"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> <span class="pl-c1">NULL</span> <span class="pl-c"><span class="pl-c">#</span> object | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.patch_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;patch_namespaced_horizontal_pod_autoscaler_status: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-7" id="user-content-parameters-7"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><strong>object</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-7" id="user-content-return-type-7"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-7" id="user-content-authorization-7"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-7" id="user-content-http-request-headers-7"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json</li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#read_namespaced_horizontal_pod_autoscaler" id="user-content-read_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>read_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler read_namespaced_horizontal_pod_autoscaler(name, namespace, pretty=pretty, exact=exact, export=export)</p>
+</blockquote>
+<p>read the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-8" id="user-content-example-8"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+exact <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'. (optional)</span>
+export <span class="pl-k">=</span> true <span class="pl-c"><span class="pl-c">#</span> bool | Should this value be exported.  Export strips fields that a user can not specify. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.read_namespaced_horizontal_pod_autoscaler(name, namespace, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty, <span class="pl-v">exact</span><span class="pl-k">=</span>exact, <span class="pl-v">export</span><span class="pl-k">=</span>export)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;read_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-8" id="user-content-parameters-8"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>exact</strong></td>
+<td><strong>bool</strong></td>
+<td>Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>export</strong></td>
+<td><strong>bool</strong></td>
+<td>Should this value be exported.  Export strips fields that a user can not specify.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-8" id="user-content-return-type-8"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-8" id="user-content-authorization-8"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-8" id="user-content-http-request-headers-8"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#read_namespaced_horizontal_pod_autoscaler_status" id="user-content-read_namespaced_horizontal_pod_autoscaler_status"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>read_namespaced_horizontal_pod_autoscaler_status</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler read_namespaced_horizontal_pod_autoscaler_status(name, namespace, pretty=pretty)</p>
+</blockquote>
+<p>read status of the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-9" id="user-content-example-9"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.read_namespaced_horizontal_pod_autoscaler_status(name, namespace, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;read_namespaced_horizontal_pod_autoscaler_status: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-9" id="user-content-parameters-9"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-9" id="user-content-return-type-9"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-9" id="user-content-authorization-9"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-9" id="user-content-http-request-headers-9"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#replace_namespaced_horizontal_pod_autoscaler" id="user-content-replace_namespaced_horizontal_pod_autoscaler"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>replace_namespaced_horizontal_pod_autoscaler</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler replace_namespaced_horizontal_pod_autoscaler(name, namespace, body, pretty=pretty)</p>
+</blockquote>
+<p>replace the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-10" id="user-content-example-10"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> kubernetes.client.V2beta1HorizontalPodAutoscaler() <span class="pl-c"><span class="pl-c">#</span> V2beta1HorizontalPodAutoscaler | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.replace_namespaced_horizontal_pod_autoscaler(name, namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;replace_namespaced_horizontal_pod_autoscaler: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-10" id="user-content-parameters-10"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-10" id="user-content-return-type-10"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-10" id="user-content-authorization-10"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-10" id="user-content-http-request-headers-10"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+<h1><a aria-hidden="true" class="anchor" href="#replace_namespaced_horizontal_pod_autoscaler_status" id="user-content-replace_namespaced_horizontal_pod_autoscaler_status"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a><strong>replace_namespaced_horizontal_pod_autoscaler_status</strong></h1>
+<blockquote>
+<p>V2beta1HorizontalPodAutoscaler replace_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, pretty=pretty)</p>
+</blockquote>
+<p>replace status of the specified HorizontalPodAutoscaler</p>
+<h3><a aria-hidden="true" class="anchor" href="#example-11" id="user-content-example-11"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Example</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> <span class="pl-c1">__future__</span> <span class="pl-k">import</span> print_function
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> kubernetes.client
+<span class="pl-k">from</span> kubernetes.client.rest <span class="pl-k">import</span> ApiException
+<span class="pl-k">from</span> pprint <span class="pl-k">import</span> pprint
+
+<span class="pl-c"><span class="pl-c">#</span> Configure API key authorization: BearerToken</span>
+configuration <span class="pl-k">=</span> kubernetes.client.Configuration()
+configuration.api_key[<span class="pl-s"><span class="pl-pds">'</span>authorization<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_API_KEY<span class="pl-pds">'</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Uncomment below to setup prefix (e.g. Bearer) for API key, if needed</span>
+<span class="pl-c"><span class="pl-c">#</span> configuration.api_key_prefix['authorization'] = 'Bearer'</span>
+
+<span class="pl-c"><span class="pl-c">#</span> create an instance of the API class</span>
+api_instance <span class="pl-k">=</span> kubernetes.client.AutoscalingV2beta1Api(kubernetes.client.ApiClient(configuration))
+name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>name_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | name of the HorizontalPodAutoscaler</span>
+namespace <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>namespace_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | object name and auth scope, such as for teams and projects</span>
+body <span class="pl-k">=</span> kubernetes.client.V2beta1HorizontalPodAutoscaler() <span class="pl-c"><span class="pl-c">#</span> V2beta1HorizontalPodAutoscaler | </span>
+pretty <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>pretty_example<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> str | If 'true', then the output is pretty printed. (optional)</span>
+
+<span class="pl-k">try</span>: 
+    api_response <span class="pl-k">=</span> api_instance.replace_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, <span class="pl-v">pretty</span><span class="pl-k">=</span>pretty)
+    pprint(api_response)
+<span class="pl-k">except</span> ApiException <span class="pl-k">as</span> e:
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Exception when calling AutoscalingV2beta1Api-&gt;replace_namespaced_horizontal_pod_autoscaler_status: <span class="pl-c1">%s</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">%</span> e)</pre></div>
+<h3><a aria-hidden="true" class="anchor" href="#parameters-11" id="user-content-parameters-11"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>name of the HorizontalPodAutoscaler</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td><strong>str</strong></td>
+<td>object name and auth scope, such as for teams and projects</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pretty</strong></td>
+<td><strong>str</strong></td>
+<td>If 'true', then the output is pretty printed.</td>
+<td>[optional]</td>
+</tr></tbody></table>
+<h3><a aria-hidden="true" class="anchor" href="#return-type-11" id="user-content-return-type-11"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Return type</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/docs/V2beta1HorizontalPodAutoscaler.md"><strong>V2beta1HorizontalPodAutoscaler</strong></a></p>
+<h3><a aria-hidden="true" class="anchor" href="#authorization-11" id="user-content-authorization-11"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Authorization</h3>
+<p><a href="/kubernetes-client/python/blob/master/kubernetes/README.md#BearerToken">BearerToken</a></p>
+<h3><a aria-hidden="true" class="anchor" href="#http-request-headers-11" id="user-content-http-request-headers-11"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json, application/yaml, application/vnd.kubernetes.protobuf</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md#documentation-for-models">[Back to Model list]</a> <a href="/kubernetes-client/python/blob/master/kubernetes/README.md">[Back to README]</a></p>
+</article>
+</div>
+</div>
+<details class="details-reset details-overlay details-overlay-dark">
+<summary aria-label="Jump to line" data-hotkey="l"></summary>
+<details-dialog aria-label="Jump to line" class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump">
+<!-- '"` --><!-- </textarea></xmp> --></details-dialog></details><form accept-charset="UTF-8" action="" class="js-jump-to-line-form Box-body d-flex" method="get"><input name="utf8" type="hidden" value="✓">
+<input aria-label="Jump to line" autofocus="" class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" placeholder="Jump to line…" type="text"/>
+<button class="btn" data-close-dialog="" type="submit">Go</button>
+</input></form> 
+
+
+<div class="modal-backdrop js-touch-events"></div>
+
+
+
+
+<div class="footer container-lg px-3" role="contentinfo">
+<div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+<ul class="list-style-none d-flex flex-wrap ">
+<li class="mr-3">© 2018 <span title="0.23139s from unicorn-1181315562-7qpr5">GitHub</span>, Inc.</li>
+<li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="https://help.github.com/articles/github-security/">Security</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to status, text:status" href="https://status.github.com/">Status</a></li>
+<li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+</ul>
+<a aria-label="Homepage" class="footer-octicon" href="https://github.com" title="GitHub">
+<svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewbox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path></svg>
+</a>
+<ul class="list-style-none d-flex flex-wrap ">
+<li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to api, text:api" href="https://developer.github.com">API</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to training, text:training" href="https://training.github.com">Training</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to shop, text:shop" href="https://shop.github.com">Shop</a></li>
+<li class="mr-3"><a data-ga-click="Footer, go to blog, text:blog" href="https://blog.github.com">Blog</a></li>
+<li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+</ul>
+</div>
+<div class="d-flex flex-justify-center pb-6">
+<span class="f6 text-gray-light"></span>
+</div>
+</div>
+<div class="ajax-error-message flash flash-error" id="ajax-error-message">
+<svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" fill-rule="evenodd"></path></svg>
+<button aria-label="Dismiss error" class="flash-close js-ajax-error-dismiss" type="button">
+<svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" fill-rule="evenodd"></path></svg>
+</button>
+    You can’t perform that action at this time.
+  </div>
+<script crossorigin="anonymous" integrity="sha512-2VdGgXQE8W5ONZ4OsrbEo/noennUZaqXkevD9R8juTHiCsjT0HFTTF6MoBfySUc8G+eFqUcDgd7v+CAu8Gjxlg==" src="https://assets-cdn.github.com/assets/compat-f849c975b0ffaa01d6ca305e48417d08.js" type="application/javascript"></script>
+<script crossorigin="anonymous" integrity="sha512-ZCuUuaCERG6/AdCPvg2qDAGDVKP7KsHnKx3EuTwcIZSLeqJpyqaZZBUmbK7Wbtgar1y1iAlO66Vstl53f/EFOg==" src="https://assets-cdn.github.com/assets/frameworks-b83c5ea8e6d3b8ce4839ec986855c7bf.js" type="application/javascript"></script>
+<script async="async" crossorigin="anonymous" integrity="sha512-AjuM7W8OMU5QY862SUcz+Tb7/CN357h506a9yqsDUXyT+tneRCZZe7h7jAfNdQo3akDvDuxF4qd4+pLuehlWEA==" src="https://assets-cdn.github.com/assets/github-dd5003808730be88dd93b57c25137660.js" type="application/javascript"></script>
+<div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+<svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" fill-rule="evenodd"></path></svg>
+<span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+<span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+</div>
+<div class="facebox" id="facebox" style="display:none;">
+<div class="facebox-popup">
+<div aria-describedby="facebox-description" aria-labelledby="facebox-header" class="facebox-content" role="dialog">
+</div>
+<button aria-label="Close modal" class="facebox-close js-facebox-close" type="button">
+<svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewbox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+<div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+<div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+</div>
+</div>
+<div class="sr-only" id="hovercard-aria-description">
+  Press h to open a hovercard with more details.
+</div>
+
+
