@@ -97,10 +97,11 @@ class Clean:
             if keys[methods[j]] is None:
                 j += 1
             trs = sub_trs[i]
+            print(len(trs))
+            keys[methods[j]] = {}
             for tr in trs:
                 name, Type, Description, Notes = tr.find_all("td")
-                keys[methods[j]] = {
-                    name.string: {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}}
+                keys[methods[j]][name.string] = {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}
             j += 1
         print(keys)
         api_verson = os.path.split(html_path)[1].split('.html')[0]
@@ -109,6 +110,7 @@ class Clean:
 
     def save_parameters(self, ):
         pass
+
 
 def regular(html_data):
     r = re.compile(
@@ -145,10 +147,11 @@ def get_parameters(html_path):
         if keys[methods[j]] is None:
             j += 1
         trs = sub_trs[i]
+        keys[methods[j]] = {}
         for tr in trs:
             name, Type, Description, Notes = tr.find_all("td")
-            keys[methods[j]] = {
-                name.string: {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}}
+            keys[methods[j]][name.string] = {"Type": Type.string, "Description": Description.string,
+                                             "Notes": Notes.string}
         j += 1
     print(keys)
     api_verson = os.path.split(html_path)[1].split('.html')[0]
@@ -158,7 +161,6 @@ def get_parameters(html_path):
 
 if __name__ == "__main__":
 
-    # c = Clean()
     filenames = os.listdir(r"F:\workspace\git\WebCrawler\File\HTML")
     html_paths = [os.path.join(r"F:\workspace\git\WebCrawler\File\HTML", i) for i in filenames]
     print(html_paths)
@@ -173,3 +175,7 @@ if __name__ == "__main__":
                 api_version, params = i
                 data[api_version] = params
         json.dump(data, fp, indent=4)
+
+    # c = Clean()
+    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\AutoscalingV2beta1Api.html"
+    # c.get_parameters(html_path)
