@@ -175,7 +175,3 @@ if __name__ == "__main__":
                 api_version, params = i
                 data[api_version] = params
         json.dump(data, fp, indent=4)
-
-    # c = Clean()
-    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\AutoscalingV2beta1Api.html"
-    # c.get_parameters(html_path)
