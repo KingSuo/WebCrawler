@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
+
 import os
-from multiprocessing import Pool as ProcessPool
-from multiprocessing.dummy import Pool as ThreadPool
 import re
+from multiprocessing import Pool
 
 import json
 
@@ -75,25 +76,34 @@ class Clean:
     def get_parameters(self, html_path):
         with open(html_path, encoding="utf-8") as fp:
             soup = BeautifulSoup(fp, "html.parser")
-        with open(r"F:\workspace\git\WebCrawler\File\HTML\ApiregistrationV1Api.html", encoding="utf-8") as fp:
+        with open(html_path, encoding="utf-8") as fp:
             has_parameters = self.regular(fp.read())
         tables = soup.find_all("table")
         tr = tables[0].find_all("tr")
         methods = [i.td.a["href"].split('#')[-1] for i in tr[1:]]
         keys = {}
+        print(len(has_parameters))
+        print(len(methods))
         for i in range(len(methods)):
             if has_parameters[i]:
                 keys[methods[i]] = {}
             else:
                 keys[methods[i]] = None
         parameters = tables[1:]
-        # print(parameters[0])
-        # print(len(parameters))
         sub_tbodys = [i.tbody for i in parameters]
         sub_trs = [i.find_all("tr") for i in sub_tbodys]
-        print(sub_trs[0])
-        print(len(sub_trs[0]))
-        print(len(sub_trs))
+        j = 0
+        for i in range(len(sub_trs)):
+            if keys[methods[j]] is None:
+                j += 1
+            trs = sub_trs[i]
+            for tr in trs:
+                name, Type, Description, Notes = tr.find_all("td")
+                keys[methods[j]] = {
+                    name.string: {"Type": Type.string, "Description": Description.string, "Notes": Notes.string}}
+            j += 1
+        print(keys)
+        return keys
 
     def save_parameters(self, ):
         pass
@@ -101,8 +111,13 @@ class Clean:
 
 if __name__ == "__main__":
     c = Clean()
+    html_paths = os.listdir(r"F:\workspace\git\WebCrawler\File\HTML")
+
     html_path = r"F:\workspace\git\WebCrawler\File\HTML\ApiregistrationV1Api.html"
     c.get_parameters(html_path)
-
-    # with open(r"F:\workspace\git\WebCrawler\File\HTML\ApiregistrationV1Api.html", encoding="utf-8") as fp:
-    #     c.regular(fp.read())
+    #
+    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\ExtensionsV1beta1Api.html"
+    # c.get_parameters(html_path)
+    #
+    # html_path = r"F:\workspace\git\WebCrawler\File\HTML\CoreV1Api.html"
+    # c.get_parameters(html_path)
